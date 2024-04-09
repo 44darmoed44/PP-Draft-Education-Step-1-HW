@@ -13,11 +13,8 @@ public class PlayerInputReader : MonoBehaviour
     {
         _inputActions = new PlayerInputAction();
 
-        _inputActions.Player.HorizontalMovement.performed += OnHorizontalMovement;
-        _inputActions.Player.HorizontalMovement.canceled += OnHorizontalMovement;
-
-        _inputActions.Player.VerticalMovement.performed += OnVerticalMovement;
-        _inputActions.Player.VerticalMovement.canceled += OnVerticalMovement;
+        _inputActions.Player.Movement.performed += OnMovement;
+        _inputActions.Player.Movement.canceled += OnMovement;
 
         _inputActions.Player.OnSaySomething.performed += OnSaySomething;
     }
@@ -27,16 +24,10 @@ public class PlayerInputReader : MonoBehaviour
         _inputActions.Enable();
     }
 
-    private void OnHorizontalMovement(InputAction.CallbackContext context)
+    private void OnMovement(InputAction.CallbackContext context)
     {
-        var direction = context.ReadValue<float>();
-        _playerMovement.SetDirection(direction, 0);
-    }
-
-    private void OnVerticalMovement(InputAction.CallbackContext context)
-    {
-        var direction = context.ReadValue<float>();
-        _playerMovement.SetDirection(0, direction);
+        var direction = context.ReadValue<Vector2>();
+        _playerMovement.SetDirection(direction);
     }
 
     private void OnSaySomething(InputAction.CallbackContext context)
