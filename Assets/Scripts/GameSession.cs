@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Scripts
 {
-    public class Inventory : MonoBehaviour
+    public class GameSession : MonoBehaviour
     {
         public int _totalCoinsValue;       
     }

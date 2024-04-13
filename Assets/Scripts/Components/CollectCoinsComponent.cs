@@ -1,11 +1,10 @@
-using System.Runtime.InteropServices;
 using UnityEngine;
 
 namespace Scripts.Components
 {
     public class CollectCoinsComponent : MonoBehaviour
     {
-        [SerializeField] private Inventory _numCoins;
+        [SerializeField] private GameSession _numCoins;
         private int coinValue;
 
         public void OnCollectCoin()

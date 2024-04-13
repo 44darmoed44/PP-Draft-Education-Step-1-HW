@@ -9,7 +9,7 @@ namespace Scripts
 {
     public class PlayerInputReader : MonoBehaviour
     {
-        [SerializeField] private PlayerMovement _playerMovement;
+        [SerializeField] private PlayerController _playerController;
 
         private PlayerInputAction _inputActions;
 
@@ -31,12 +31,12 @@ namespace Scripts
         private void OnMovement(InputAction.CallbackContext context)
         {
             var direction = context.ReadValue<Vector2>();
-            _playerMovement.SetDirection(direction);
+            _playerController.SetDirection(direction);
         }
 
         private void OnSaySomething(InputAction.CallbackContext context)
         {
-            _playerMovement.SaySomething();
+            _playerController.SaySomething();
         }
 
     }
