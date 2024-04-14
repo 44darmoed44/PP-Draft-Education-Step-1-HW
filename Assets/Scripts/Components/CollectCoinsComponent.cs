@@ -4,8 +4,13 @@ namespace Scripts.Components
 {
     public class CollectCoinsComponent : MonoBehaviour
     {
-        [SerializeField] private GameSession _numCoins;
+        private GameSession _numCoins;
         private int coinValue;
+
+        private void Awake()
+        {
+            _numCoins = FindObjectOfType<GameSession>();
+        }
 
         public void OnCollectCoin()
         {
