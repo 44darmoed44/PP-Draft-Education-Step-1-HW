@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 8616532874655647684}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.25, y: -4.5, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -75,12 +75,13 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 79a033bfc7d265b41ad729c73629dfb2, type: 3}
+  m_Sprite: {fileID: 3714227102187029162, guid: 4c70d58152d10c7438d6a68b4df656a2,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.32, y: 0.32}
+  m_Size: {x: 1, y: 1.25}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -102,7 +103,13 @@ MonoBehaviour:
   _clips:
   - _name: idle
     _sprites:
-    - {fileID: 21300000, guid: 79a033bfc7d265b41ad729c73629dfb2, type: 3}
+    - {fileID: 3714227102187029162, guid: 4c70d58152d10c7438d6a68b4df656a2, type: 3}
+    - {fileID: -6202940564662568092, guid: 4c70d58152d10c7438d6a68b4df656a2, type: 3}
+    - {fileID: -8747976068718324687, guid: 4c70d58152d10c7438d6a68b4df656a2, type: 3}
+    - {fileID: 7142050841817600938, guid: 4c70d58152d10c7438d6a68b4df656a2, type: 3}
+    - {fileID: -860807820763296739, guid: 4c70d58152d10c7438d6a68b4df656a2, type: 3}
+    - {fileID: -5249288142952506341, guid: 4c70d58152d10c7438d6a68b4df656a2, type: 3}
+    - {fileID: 1089735312403315716, guid: 4c70d58152d10c7438d6a68b4df656a2, type: 3}
     _loop: 1
     _allowNextClip: 0
     _onComplete:
@@ -110,10 +117,11 @@ MonoBehaviour:
         m_Calls: []
   - _name: destroy
     _sprites:
-    - {fileID: -4986890610287934012, guid: feda9296af55190478cb6b52c535cfed, type: 3}
-    - {fileID: 6143208460787649835, guid: feda9296af55190478cb6b52c535cfed, type: 3}
-    - {fileID: 7609282858266732271, guid: feda9296af55190478cb6b52c535cfed, type: 3}
-    - {fileID: -6288512792030432889, guid: feda9296af55190478cb6b52c535cfed, type: 3}
+    - {fileID: 6040734443530017722, guid: 4c70d58152d10c7438d6a68b4df656a2, type: 3}
+    - {fileID: 8167133005111728920, guid: 4c70d58152d10c7438d6a68b4df656a2, type: 3}
+    - {fileID: 2014349484240403859, guid: 4c70d58152d10c7438d6a68b4df656a2, type: 3}
+    - {fileID: 6326803469982491369, guid: 4c70d58152d10c7438d6a68b4df656a2, type: 3}
+    - {fileID: 6519628818910804322, guid: 4c70d58152d10c7438d6a68b4df656a2, type: 3}
     _loop: 0
     _allowNextClip: 0
     _onComplete:
@@ -156,9 +164,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.023897469, y: -0.099573135}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.22517967
 --- !u!114 &5663749350965693477
 MonoBehaviour:
   m_ObjectHideFlags: 0

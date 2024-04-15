@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Net.NetworkInformation;
+﻿using Scripts.Components;
 using UnityEngine;
 
 namespace Scripts
@@ -9,18 +7,22 @@ namespace Scripts
     {
         [SerializeField] private float _speed;
         [SerializeField] private float _jumpScale;
+        [SerializeField] private bool _isGrounded;
+        [SerializeField] private bool _allowDoubleJump;
+        
+        [SerializeField] private SpawnComponent _particlesSpawner;
 
         [SerializeField] private LayerCheck _groundCheck;
+
+        private float _lastVelocityY;
 
         private Rigidbody2D _rigidbody;
         private Vector2 _direction;
         private Animator _animator;
-        private SpriteRenderer _spriteRenderer;
-        [SerializeField]private bool _isGrounded;
-        [SerializeField]private bool _allowDoubleJump;
 
         private static readonly int isGroundKey = Animator.StringToHash("isGrounded");
         private static readonly int isRunningKey = Animator.StringToHash("isRunning");
+        private static readonly int allowDoubleJumpKey = Animator.StringToHash("allowDoubleJump");
         private static readonly int vetricalVelocityKey = Animator.StringToHash("vetricalVelocity");
 
 
@@ -28,7 +30,6 @@ namespace Scripts
         {
             _rigidbody = GetComponent<Rigidbody2D>();
             _animator = GetComponent<Animator>();
-            _spriteRenderer = GetComponent<SpriteRenderer>();
         }
 
 
@@ -58,11 +59,11 @@ namespace Scripts
 
             if(_direction.x > 0)
             {
-                _spriteRenderer.flipX = false;
+                transform.localScale = Vector3.one;
             }
             else if (_direction.x  < 0)
             {
-                _spriteRenderer.flipX = true;
+                transform.localScale = new Vector3(-1, 1, 1);
             }
         }
 
@@ -99,6 +100,7 @@ namespace Scripts
             else if (_allowDoubleJump)
             {
                 yVeocity = _jumpScale;
+                _animator.SetTrigger(allowDoubleJumpKey);
                 _allowDoubleJump = false;
             }
 
@@ -106,17 +108,44 @@ namespace Scripts
         }
 
 
-        private void Update()
+        public void FootStepsParticlesSpawner()
         {
-            _isGrounded = IsGrounded();
+            _particlesSpawner.Spawn("FootStepsParticle");
+        }
+
+
+        public void JumpParticlesSpawner()
+        {
+            _particlesSpawner.Spawn("JumpParticle");
+        }
+
+
+        private void FallParticleSpawner()
+        {
+            _particlesSpawner.Spawn("FallParticle");
         }
 
 
         private void FixedUpdate()
         {
+            _isGrounded = IsGrounded();
+
+            if(_isGrounded)
+            {
+                if (_lastVelocityY <= -14f || !_allowDoubleJump)
+                {
+                    FallParticleSpawner();
+                    _lastVelocityY = 0;
+                }
+            }
+
             var xVelocity = _direction.x * _speed;
             var yVelocity = CalculateYVelocity();
+            _lastVelocityY = yVelocity;
             _rigidbody.velocity = new Vector2(xVelocity, yVelocity);
+
+
+
 
             UpdateAnimation();
         }
