@@ -4,12 +4,12 @@ namespace Scripts.Components
 {
     public class CollectCoinsComponent : MonoBehaviour
     {
-        private GameSession _numCoins;
+        private PlayerCoins _playerCoins;
         private int coinValue;
 
         private void Awake()
         {
-            _numCoins = FindObjectOfType<GameSession>();
+            _playerCoins = FindObjectOfType<PlayerCoins>();
         }
 
         public void OnCollectCoin()
@@ -23,8 +23,8 @@ namespace Scripts.Components
                 coinValue = 10;
             }
 
-            _numCoins._totalCoinsValue += coinValue;
-            Debug.Log(_numCoins._totalCoinsValue);
+            var totalCoins = _playerCoins.GetTotalCoinsValue();
+            _playerCoins.SetTotalCoinsValue(totalCoins+coinValue);
         }
     }
 }

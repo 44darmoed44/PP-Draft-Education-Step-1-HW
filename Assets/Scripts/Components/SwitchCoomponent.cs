@@ -8,6 +8,11 @@ namespace Scripts.Components
         [SerializeField] private bool _state;
         [SerializeField] private string _animtionKey;
 
+        public void Awake()
+        {
+            _animator.SetBool(_animtionKey, _state);
+        }
+
         public void Switch()
         {
             _state = !_state;

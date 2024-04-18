@@ -8,35 +8,35 @@ namespace Scripts
     {
         [SerializeField] private PlayerMovement _playerMovement;
         private PlayerController _playerController;
-        private PlayerInputAction _inputActions;
+        public PlayerInputAction inputActions;
 
         private void Awake()
         {
             _playerController = GetComponent<PlayerController>();
 
-            _inputActions = new PlayerInputAction();
+            inputActions = new PlayerInputAction();
 
-            _inputActions.Player.Movement.performed += OnMovement;
-            _inputActions.Player.Movement.canceled += OnMovement;
+            inputActions.Player.Movement.performed += OnMovement;
+            inputActions.Player.Movement.canceled += OnMovement;
 
-            _inputActions.Player.OnSaySomething.canceled += OnSaySomething;
+            inputActions.Player.OnSaySomething.canceled += OnSaySomething;
 
-            _inputActions.Player.OnInteract.canceled += OnInteract;
+            inputActions.Player.OnInteract.canceled += OnInteract;
         }
 
         private void OnDestroy()
         {
-            _inputActions.Player.Movement.performed -= OnMovement;
-            _inputActions.Player.Movement.canceled -= OnMovement;
+            inputActions.Player.Movement.performed -= OnMovement;
+            inputActions.Player.Movement.canceled -= OnMovement;
 
-            _inputActions.Player.OnSaySomething.canceled -= OnSaySomething;
+            inputActions.Player.OnSaySomething.canceled -= OnSaySomething;
 
-            _inputActions.Player.OnInteract.canceled -= OnInteract;
+            inputActions.Player.OnInteract.canceled -= OnInteract;
         }
 
         private void OnEnable()
         {
-            _inputActions.Enable();
+            inputActions.Enable();
         }
 
         private void OnMovement(InputAction.CallbackContext context)

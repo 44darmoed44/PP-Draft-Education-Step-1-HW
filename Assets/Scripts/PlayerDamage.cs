@@ -7,7 +7,7 @@ namespace Scripts
         [SerializeField] private float _damageJumpScale;
         [SerializeField] private bool _isInvulnerable;
         [SerializeField] private ParticleSystem _hitParticles;
-        [SerializeField] private GameSession _gameSession;
+        [SerializeField] private PlayerCoins _playerCoins;
 
         private Animator _animator;
         private Rigidbody2D _rigidbody;
@@ -17,12 +17,14 @@ namespace Scripts
         {
             _animator = GetComponent<Animator>();
             _rigidbody = GetComponent<Rigidbody2D>();
+            _playerCoins = GetComponent<PlayerCoins>();
         }
 
         private void SpawnParticles()
         {
-            var numCoinsToDispose = Mathf.Min(_gameSession._totalCoinsValue, 5);
-            _gameSession._totalCoinsValue -= numCoinsToDispose;
+            var totalCoins = _playerCoins.GetTotalCoinsValue();
+            var numCoinsToDispose = Mathf.Min(totalCoins, 5);
+            _playerCoins.SetTotalCoinsValue(totalCoins-numCoinsToDispose);
 
             var burst = _hitParticles.emission.GetBurst(0);
             burst.count = numCoinsToDispose;
@@ -39,7 +41,7 @@ namespace Scripts
                 _animator.SetTrigger(HitKey);
                 _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, _damageJumpScale);
 
-                if (_gameSession._totalCoinsValue > 0)
+                if (_playerCoins.GetTotalCoinsValue() > 0)
                 {
                     SpawnParticles();
                 }                    
