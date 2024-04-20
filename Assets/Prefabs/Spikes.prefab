@@ -101,7 +101,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8233416834686605621}
-        m_MethodName: ApplyDamage
+        m_MethodName: Apply
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -149,4 +149,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6121bfb8ada9409478bad08df8c8867a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _changeHealthValue: 1
+  _changeHealthValue: -1

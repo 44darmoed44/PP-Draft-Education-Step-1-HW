@@ -58,7 +58,7 @@ namespace Scripts
         private void StartAnimation()
         {
             _nextFrameTime = Time.time + _fps;
-            _isPlaying = true;
+            enabled = _isPlaying = true;
             _currentSpriteIndex = 0;
         }
 
@@ -80,9 +80,9 @@ namespace Scripts
                 }
                 else
                 {
+                    enabled = _isPlaying = clip.AllowNextClip;
                     clip.OnComplete?.Invoke();
                     _onComplete?.Invoke(clip.Name);
-                    enabled = _isPlaying = clip.AllowNextClip;
                     if (clip.AllowNextClip)
                     {
                         _currentSpriteIndex = 0;

@@ -28,7 +28,7 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
             ""id"": ""c6751328-2857-4b9a-8d6a-a6a3fe4c24db"",
             ""actions"": [
                 {
-                    ""name"": ""OnSaySomething"",
+                    ""name"": ""OnAttack"",
                     ""type"": ""Button"",
                     ""id"": ""a3cc15a0-c753-4822-91d9-9b6f9748939e"",
                     ""expectedControlType"": ""Button"",
@@ -63,7 +63,7 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""OnSaySomething"",
+                    ""action"": ""OnAttack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -140,7 +140,7 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
 }");
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
-        m_Player_OnSaySomething = m_Player.FindAction("OnSaySomething", throwIfNotFound: true);
+        m_Player_OnAttack = m_Player.FindAction("OnAttack", throwIfNotFound: true);
         m_Player_Movement = m_Player.FindAction("Movement", throwIfNotFound: true);
         m_Player_OnInteract = m_Player.FindAction("OnInteract", throwIfNotFound: true);
     }
@@ -202,14 +202,14 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
     // Player
     private readonly InputActionMap m_Player;
     private IPlayerActions m_PlayerActionsCallbackInterface;
-    private readonly InputAction m_Player_OnSaySomething;
+    private readonly InputAction m_Player_OnAttack;
     private readonly InputAction m_Player_Movement;
     private readonly InputAction m_Player_OnInteract;
     public struct PlayerActions
     {
         private @PlayerInputAction m_Wrapper;
         public PlayerActions(@PlayerInputAction wrapper) { m_Wrapper = wrapper; }
-        public InputAction @OnSaySomething => m_Wrapper.m_Player_OnSaySomething;
+        public InputAction @OnAttack => m_Wrapper.m_Player_OnAttack;
         public InputAction @Movement => m_Wrapper.m_Player_Movement;
         public InputAction @OnInteract => m_Wrapper.m_Player_OnInteract;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
@@ -221,9 +221,9 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
         {
             if (m_Wrapper.m_PlayerActionsCallbackInterface != null)
             {
-                @OnSaySomething.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOnSaySomething;
-                @OnSaySomething.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOnSaySomething;
-                @OnSaySomething.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOnSaySomething;
+                @OnAttack.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOnAttack;
+                @OnAttack.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOnAttack;
+                @OnAttack.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOnAttack;
                 @Movement.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMovement;
                 @Movement.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMovement;
                 @Movement.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMovement;
@@ -234,9 +234,9 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @OnSaySomething.started += instance.OnOnSaySomething;
-                @OnSaySomething.performed += instance.OnOnSaySomething;
-                @OnSaySomething.canceled += instance.OnOnSaySomething;
+                @OnAttack.started += instance.OnOnAttack;
+                @OnAttack.performed += instance.OnOnAttack;
+                @OnAttack.canceled += instance.OnOnAttack;
                 @Movement.started += instance.OnMovement;
                 @Movement.performed += instance.OnMovement;
                 @Movement.canceled += instance.OnMovement;
@@ -249,7 +249,7 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
     public PlayerActions @Player => new PlayerActions(this);
     public interface IPlayerActions
     {
-        void OnOnSaySomething(InputAction.CallbackContext context);
+        void OnOnAttack(InputAction.CallbackContext context);
         void OnMovement(InputAction.CallbackContext context);
         void OnOnInteract(InputAction.CallbackContext context);
     }

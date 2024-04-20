@@ -7,23 +7,38 @@ namespace Scripts.Components
     {
         [SerializeField] public int _health;
         [SerializeField] private UnityEvent _onDamage;
+        [SerializeField] private bool _isInvulnerable;
+
         [SerializeField] private UnityEvent _onHeal;
         [SerializeField] private UnityEvent _onDie;
 
-        public void ApplyDamage(int damageValue)
+        public void ModifyHealth(int changeHPValue)
         {
-            _health -= damageValue;
-            _onDamage?.Invoke();
+            if (!_isInvulnerable)
+            {
+                _health += changeHPValue;
+                
+                if (changeHPValue < 0)
+                {
+                    _onDamage?.Invoke();
+                }
+            }
+
+            if (changeHPValue > 0)
+            {
+                _onHeal?.Invoke();
+                Debug.Log(_health);
+            }
+
             if (_health <= 0)
             {
                 _onDie?.Invoke();
             }
         }
 
-        public void ApplyHeall(int heallValue)
+        public void IsInvulnerable()
         {
-            _health += heallValue;
-            _onHeal?.Invoke();
+            _isInvulnerable = !_isInvulnerable;
         }
     }
 }

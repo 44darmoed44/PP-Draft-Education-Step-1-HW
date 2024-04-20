@@ -1,4 +1,5 @@
 ﻿using Scripts.Components;
+using UnityEditor.Animations;
 using UnityEngine;
 
 namespace Scripts
@@ -11,14 +12,19 @@ namespace Scripts
         [SerializeField] private bool _allowDoubleJump;
         
         [SerializeField] private SpawnComponent _particlesSpawner;
+        [SerializeField] private SpawnComponent _attackParticlesSpawner;
 
         [SerializeField] private LayerCheck _groundCheck;
+
+        [SerializeField] private AnimatorController _armed;
+        [SerializeField] private AnimatorController _disarmed;
 
         private float _lastVelocityY;
 
         private Rigidbody2D _rigidbody;
         private Vector2 _direction;
         private Animator _animator;
+        private PlayerInputReader _playerInputReader;
 
         private static readonly int isGroundKey = Animator.StringToHash("isGrounded");
         private static readonly int isRunningKey = Animator.StringToHash("isRunning");
@@ -30,6 +36,7 @@ namespace Scripts
         {
             _rigidbody = GetComponent<Rigidbody2D>();
             _animator = GetComponent<Animator>();
+            _playerInputReader = GetComponent<PlayerInputReader>();
         }
 
 
@@ -125,6 +132,16 @@ namespace Scripts
             _particlesSpawner.Spawn("FallParticle");
         }
 
+        private void AttackParticleSpawner()
+        {
+            _attackParticlesSpawner.Spawn("SwordAttackParticle");
+        }
+
+        public void ArmPlayer()
+        {
+            _playerInputReader._isArmed = true;
+            _animator.runtimeAnimatorController = _armed;
+        }
 
         private void FixedUpdate()
         {

@@ -6,7 +6,7 @@
             "id": "c6751328-2857-4b9a-8d6a-a6a3fe4c24db",
             "actions": [
                 {
-                    "name": "OnSaySomething",
+                    "name": "OnAttack",
                     "type": "Button",
                     "id": "a3cc15a0-c753-4822-91d9-9b6f9748939e",
                     "expectedControlType": "Button",
@@ -41,7 +41,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "OnSaySomething",
+                    "action": "OnAttack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

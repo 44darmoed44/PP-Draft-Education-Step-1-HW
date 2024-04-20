@@ -5,7 +5,6 @@ namespace Scripts
     public class PlayerDamage : MonoBehaviour
     {
         [SerializeField] private float _damageJumpScale;
-        [SerializeField] private bool _isInvulnerable;
         [SerializeField] private ParticleSystem _hitParticles;
         [SerializeField] private PlayerCoins _playerCoins;
 
@@ -36,21 +35,13 @@ namespace Scripts
 
         public void TakeDamage()
         {
-            if (!_isInvulnerable)
+            _animator.SetTrigger(HitKey);
+            _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, _damageJumpScale);
+
+            if (_playerCoins.GetTotalCoinsValue() > 0)
             {
-                _animator.SetTrigger(HitKey);
-                _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, _damageJumpScale);
-
-                if (_playerCoins.GetTotalCoinsValue() > 0)
-                {
-                    SpawnParticles();
-                }                    
-            }
-        }
-
-        public void IsInvulnerable()
-        {
-            _isInvulnerable = !_isInvulnerable;
+                SpawnParticles();
+            }                    
         }
     }
 }

@@ -17,10 +17,10 @@ namespace Scripts.Components
                     _action?.Invoke(other.gameObject);
                 }
             }
-
-            [Serializable]
-            public class EnterEvent : UnityEvent<GameObject>
-            {    
-            }
+    }
+    
+    [Serializable]
+    public class EnterEvent : UnityEvent<GameObject>
+    {    
     }
 }
