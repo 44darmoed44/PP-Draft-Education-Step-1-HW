@@ -1,4 +1,5 @@
 ﻿using Scripts.Components;
+using Scripts.Model;
 using UnityEditor.Animations;
 using UnityEngine;
 
@@ -25,6 +26,7 @@ namespace Scripts
         private Vector2 _direction;
         private Animator _animator;
         private PlayerInputReader _playerInputReader;
+        private GameSession _session;
 
         private static readonly int isGroundKey = Animator.StringToHash("isGrounded");
         private static readonly int isRunningKey = Animator.StringToHash("isRunning");
@@ -37,6 +39,8 @@ namespace Scripts
             _rigidbody = GetComponent<Rigidbody2D>();
             _animator = GetComponent<Animator>();
             _playerInputReader = GetComponent<PlayerInputReader>();
+            _session = FindObjectOfType<GameSession>();
+            UpdatePlayerWeapon();
         }
 
 
@@ -139,8 +143,13 @@ namespace Scripts
 
         public void ArmPlayer()
         {
-            _playerInputReader._isArmed = true;
-            _animator.runtimeAnimatorController = _armed;
+            _session.Data.IsArmed = _playerInputReader._isArmed = true;
+            UpdatePlayerWeapon();
+        }
+
+        private void UpdatePlayerWeapon()
+        {
+            _animator.runtimeAnimatorController = _session.Data.IsArmed ? _armed : _disarmed;
         }
 
         private void FixedUpdate()
@@ -160,9 +169,6 @@ namespace Scripts
             var yVelocity = CalculateYVelocity();
             _lastVelocityY = yVelocity;
             _rigidbody.velocity = new Vector2(xVelocity, yVelocity);
-
-
-
 
             UpdateAnimation();
         }

@@ -8,7 +8,7 @@ namespace Scripts
 
     public class SpriteAnimation : MonoBehaviour
     {
-        [SerializeField] private int _frameRate;
+        [SerializeField] private int _frameRate = 10;
         [SerializeField] private UnityEvent<string> _onComplete;
         [SerializeField] private AnimationClip[] _clips;
 

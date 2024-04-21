@@ -1,3 +1,4 @@
+using Scripts.Model;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -12,6 +13,18 @@ namespace Scripts.Components
         [SerializeField] private UnityEvent _onHeal;
         [SerializeField] private UnityEvent _onDie;
 
+        private GameSession _session;
+
+        private void Awake()
+        {
+            _session = FindObjectOfType<GameSession>();
+        }
+
+        private void Start()
+        {
+            _health = _session.Data.Hp;
+        }
+
         public void ModifyHealth(int changeHPValue)
         {
             if (!_isInvulnerable)
@@ -22,6 +35,8 @@ namespace Scripts.Components
                 {
                     _onDamage?.Invoke();
                 }
+
+                _session.Data.Hp = _health;
             }
 
             if (changeHPValue > 0)
