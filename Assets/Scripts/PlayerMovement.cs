@@ -10,6 +10,7 @@ namespace Scripts
         [SerializeField] private float _speed;
         [SerializeField] private float _jumpScale;
         [SerializeField] private bool _isGrounded;
+        [SerializeField] private bool _isSpawnFallParticle;
         [SerializeField] private bool _allowDoubleJump;
         
         [SerializeField] private SpawnComponent _particlesSpawner;
@@ -150,6 +151,7 @@ namespace Scripts
         private void UpdatePlayerWeapon()
         {
             _animator.runtimeAnimatorController = _session.Data.IsArmed ? _armed : _disarmed;
+            _playerInputReader._isArmed = _session.Data.IsArmed;
         }
 
         private void FixedUpdate()
@@ -160,9 +162,17 @@ namespace Scripts
             {
                 if (_lastVelocityY <= -14f || !_allowDoubleJump)
                 {
-                    FallParticleSpawner();
+                    if (_isSpawnFallParticle) 
+                    {
+                        FallParticleSpawner();
+                        _isSpawnFallParticle = false;
+                    }
                     _lastVelocityY = 0;
                 }
+            }
+            else
+            {
+                _isSpawnFallParticle = true;
             }
 
             var xVelocity = _direction.x * _speed;

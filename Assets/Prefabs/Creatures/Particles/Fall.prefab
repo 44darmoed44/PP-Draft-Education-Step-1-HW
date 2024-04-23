@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2304814220134005354}
   - component: {fileID: 8037644638018260562}
   m_Layer: 0
-  m_Name: JumpParticle
+  m_Name: Fall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 16e3be2e05fac6f4cac32328d81b9999, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f39863949105f8f4489bb869d8ad4a5e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,12 +99,11 @@ MonoBehaviour:
   _clips:
   - _name: jump
     _sprites:
-    - {fileID: 21300000, guid: 16e3be2e05fac6f4cac32328d81b9999, type: 3}
-    - {fileID: 21300000, guid: 21a416b7304de4f4e9d1a18c37b82e54, type: 3}
-    - {fileID: 21300000, guid: cad416f84586c694eb45a95badda41d0, type: 3}
-    - {fileID: 21300000, guid: 348bcef63f93e2545be4aa2535970543, type: 3}
-    - {fileID: 21300000, guid: 9f01d3621ea2c5b4ca813f285825c83e, type: 3}
-    - {fileID: 21300000, guid: a3d1adc199a3e9741ba1def59cf6281c, type: 3}
+    - {fileID: 21300000, guid: f39863949105f8f4489bb869d8ad4a5e, type: 3}
+    - {fileID: 21300000, guid: e24049c657022084697cb4f7570b05d3, type: 3}
+    - {fileID: 21300000, guid: 2694483ec81266d459b238fe882626ee, type: 3}
+    - {fileID: 21300000, guid: 2ef1a34c6d5701d429bc818d8cf103db, type: 3}
+    - {fileID: 21300000, guid: 34f0a57745a77f44a9152c6035b281c0, type: 3}
     _loop: 0
     _allowNextClip: 0
     _onComplete:
