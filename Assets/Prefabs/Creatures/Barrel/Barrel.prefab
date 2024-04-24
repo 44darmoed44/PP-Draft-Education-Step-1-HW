@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6102941447742866695}
   - component: {fileID: 6102941447742866694}
   - component: {fileID: 2933616776225920097}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: Barrel
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4b87aa6bd5b57b1478a714c1c0d4a356, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 391e690899a14df40b4dc90eef5b3a18, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -103,7 +103,7 @@ MonoBehaviour:
   _clips:
   - _name: idle
     _sprites:
-    - {fileID: 21300000, guid: 4b87aa6bd5b57b1478a714c1c0d4a356, type: 3}
+    - {fileID: 21300000, guid: 391e690899a14df40b4dc90eef5b3a18, type: 3}
     _loop: 1
     _allowNextClip: 0
     _onComplete:
@@ -114,7 +114,7 @@ MonoBehaviour:
     - {fileID: 21300000, guid: aa75a0e21c07bcc4f8b89c2b0b3d9862, type: 3}
     - {fileID: 21300000, guid: 6d4b2f4987abe1d4680e79cb9f85af74, type: 3}
     - {fileID: 21300000, guid: f49c0907a8aff884c9b79dd3dab1f4bc, type: 3}
-    - {fileID: 21300000, guid: 7d0057b1f33fcd3499f55556e332bed5, type: 3}
+    - {fileID: 21300000, guid: 391e690899a14df40b4dc90eef5b3a18, type: 3}
     _loop: 0
     _allowNextClip: 0
     _onComplete:
@@ -136,7 +136,7 @@ MonoBehaviour:
     - {fileID: 21300000, guid: aa75a0e21c07bcc4f8b89c2b0b3d9862, type: 3}
     - {fileID: 21300000, guid: 6d4b2f4987abe1d4680e79cb9f85af74, type: 3}
     - {fileID: 21300000, guid: f49c0907a8aff884c9b79dd3dab1f4bc, type: 3}
-    - {fileID: 21300000, guid: aa75a0e21c07bcc4f8b89c2b0b3d9862, type: 3}
+    - {fileID: 21300000, guid: 391e690899a14df40b4dc90eef5b3a18, type: 3}
     _loop: 0
     _allowNextClip: 0
     _onComplete:
@@ -258,7 +258,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -0.019512177, y: -0.017343998}
   m_SpriteTilingProperty:
-    border: {x: 0.03125, y: 0.0625, z: 0.0625, w: 0.09375}
+    border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.8125, y: 0.9375}
     newSize: {x: 0.8125, y: 0.9375}

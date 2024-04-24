@@ -1,5 +1,4 @@
 using Scripts.Components;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 namespace Scripts.Creatures
@@ -64,17 +63,17 @@ namespace Scripts.Creatures
             _animator.SetBool(IsRunningKey, Direction.x != 0);
             _animator.SetFloat(VetricalVelocityKey, _rigidbody.velocity.y);
 
-            UpdateSpriteDirection();
+            UpdateSpriteDirection(Direction);
         }
 
-        private void UpdateSpriteDirection()
+        public void UpdateSpriteDirection(Vector2 direction)
         {
             var multiplier = _invertScale ? -1 : 1;
-            if (Direction.x > 0f)
+            if (direction.x > 0f)
             {
                 transform.localScale = new Vector3(multiplier, 1, 1);
             }
-            else if (Direction.x < 0f)
+            else if (direction.x < 0f)
             {
                 transform.localScale = new Vector3(-1 * multiplier, 1, 1);
             }

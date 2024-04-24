@@ -30,6 +30,8 @@ namespace Scripts
             inputActions.Player.OnAttack.canceled += OnAttack;
 
             inputActions.Player.OnInteract.canceled += OnInteract;
+
+            inputActions.Player.Throw.performed += OnThrow;
         }
 
         private void OnDestroy()
@@ -40,6 +42,8 @@ namespace Scripts
             inputActions.Player.OnAttack.canceled -= OnAttack;
 
             inputActions.Player.OnInteract.canceled -= OnInteract;
+
+            inputActions.Player.Throw.performed -= OnThrow;
         }
 
         private void OnEnable()
@@ -75,6 +79,11 @@ namespace Scripts
         private void OnInteract(InputAction.CallbackContext context)
         {
             _playerController.Interact();
+        }
+
+        private void OnThrow(InputAction.CallbackContext context)
+        {
+            _playerController.Throw();
         }
 
     }

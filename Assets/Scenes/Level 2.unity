@@ -1525,10 +1525,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sharky
       objectReference: {fileID: 0}
+    - target: {fileID: 4646529324031185058, guid: 0b549fd5cbbb3cc4a88d63f7358b04c7,
+        type: 3}
+      propertyPath: _invertScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8195487947918824080, guid: 0b549fd5cbbb3cc4a88d63f7358b04c7,
         type: 3}
       propertyPath: _timeToDie
-      value: 3
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8195487947918824080, guid: 0b549fd5cbbb3cc4a88d63f7358b04c7,
+        type: 3}
+      propertyPath: _timeToBackPatrol
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b549fd5cbbb3cc4a88d63f7358b04c7, type: 3}

@@ -2129,7 +2129,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 423710625}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.91, y: 7.01, z: -10}
+  m_LocalPosition: {x: 31.32, y: 2.49, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1768260656}
@@ -2614,7 +2614,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.91, y: 7.01, z: -10}
+  m_LocalPosition: {x: 30.694675, y: 2.4863136, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -8328,6 +8328,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6102941447742866688, guid: e65519a46e3ccb74682c26cbc558c22c,
         type: 3}
+      propertyPath: _clips.Array.data[0]._sprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 4b87aa6bd5b57b1478a714c1c0d4a356,
+        type: 3}
+    - target: {fileID: 6102941447742866688, guid: e65519a46e3ccb74682c26cbc558c22c,
+        type: 3}
       propertyPath: _clips.Array.data[2]._onComplete.m_PersistentCalls.m_Calls.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -8456,6 +8462,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoinBarrel (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6102941447742866700, guid: e65519a46e3ccb74682c26cbc558c22c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6102941447742866701, guid: e65519a46e3ccb74682c26cbc558c22c,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4b87aa6bd5b57b1478a714c1c0d4a356,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e65519a46e3ccb74682c26cbc558c22c, type: 3}
 --- !u!4 &897772528 stripped
@@ -8684,24 +8701,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1600480494}
     m_Modifications:
-    - target: {fileID: 6102941447742866688, guid: e65519a46e3ccb74682c26cbc558c22c,
-        type: 3}
-      propertyPath: _clips.Array.data[0]._sprites.Array.data[0]
-      value: 
-      objectReference: {fileID: 21300000, guid: 391e690899a14df40b4dc90eef5b3a18,
-        type: 3}
-    - target: {fileID: 6102941447742866688, guid: e65519a46e3ccb74682c26cbc558c22c,
-        type: 3}
-      propertyPath: _clips.Array.data[1]._sprites.Array.data[3]
-      value: 
-      objectReference: {fileID: 21300000, guid: 391e690899a14df40b4dc90eef5b3a18,
-        type: 3}
-    - target: {fileID: 6102941447742866688, guid: e65519a46e3ccb74682c26cbc558c22c,
-        type: 3}
-      propertyPath: _clips.Array.data[2]._sprites.Array.data[3]
-      value: 
-      objectReference: {fileID: 21300000, guid: 391e690899a14df40b4dc90eef5b3a18,
-        type: 3}
     - target: {fileID: 6102941447742866690, guid: e65519a46e3ccb74682c26cbc558c22c,
         type: 3}
       propertyPath: m_RootOrder
@@ -8757,37 +8756,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6102941447742866694, guid: e65519a46e3ccb74682c26cbc558c22c,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.border.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6102941447742866694, guid: e65519a46e3ccb74682c26cbc558c22c,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.border.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6102941447742866694, guid: e65519a46e3ccb74682c26cbc558c22c,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.border.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6102941447742866694, guid: e65519a46e3ccb74682c26cbc558c22c,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.border.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6102941447742866700, guid: e65519a46e3ccb74682c26cbc558c22c,
         type: 3}
       propertyPath: m_Name
       value: DestructableBarrel
       objectReference: {fileID: 0}
-    - target: {fileID: 6102941447742866701, guid: e65519a46e3ccb74682c26cbc558c22c,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 391e690899a14df40b4dc90eef5b3a18,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e65519a46e3ccb74682c26cbc558c22c, type: 3}
 --- !u!1 &970149402
@@ -8910,6 +8883,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &974157007 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3577550046228319299, guid: ee562153f89400a4d88641cff681869b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1984857789}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &978414512 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2055805303639700083, guid: 9303d3a52548d7b408d66764c7c8b866,
@@ -9199,24 +9178,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1600480494}
     m_Modifications:
-    - target: {fileID: 6102941447742866688, guid: e65519a46e3ccb74682c26cbc558c22c,
-        type: 3}
-      propertyPath: _clips.Array.data[0]._sprites.Array.data[0]
-      value: 
-      objectReference: {fileID: 21300000, guid: 391e690899a14df40b4dc90eef5b3a18,
-        type: 3}
-    - target: {fileID: 6102941447742866688, guid: e65519a46e3ccb74682c26cbc558c22c,
-        type: 3}
-      propertyPath: _clips.Array.data[1]._sprites.Array.data[3]
-      value: 
-      objectReference: {fileID: 21300000, guid: 391e690899a14df40b4dc90eef5b3a18,
-        type: 3}
-    - target: {fileID: 6102941447742866688, guid: e65519a46e3ccb74682c26cbc558c22c,
-        type: 3}
-      propertyPath: _clips.Array.data[2]._sprites.Array.data[3]
-      value: 
-      objectReference: {fileID: 21300000, guid: 391e690899a14df40b4dc90eef5b3a18,
-        type: 3}
     - target: {fileID: 6102941447742866690, guid: e65519a46e3ccb74682c26cbc558c22c,
         type: 3}
       propertyPath: m_RootOrder
@@ -9272,37 +9233,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6102941447742866694, guid: e65519a46e3ccb74682c26cbc558c22c,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.border.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6102941447742866694, guid: e65519a46e3ccb74682c26cbc558c22c,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.border.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6102941447742866694, guid: e65519a46e3ccb74682c26cbc558c22c,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.border.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6102941447742866694, guid: e65519a46e3ccb74682c26cbc558c22c,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.border.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6102941447742866700, guid: e65519a46e3ccb74682c26cbc558c22c,
         type: 3}
       propertyPath: m_Name
       value: DestructableBarrel (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 6102941447742866701, guid: e65519a46e3ccb74682c26cbc558c22c,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 391e690899a14df40b4dc90eef5b3a18,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e65519a46e3ccb74682c26cbc558c22c, type: 3}
 --- !u!1001 &1101406830
@@ -9381,6 +9316,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1600480494}
     m_Modifications:
+    - target: {fileID: 6102941447742866688, guid: e65519a46e3ccb74682c26cbc558c22c,
+        type: 3}
+      propertyPath: _clips.Array.data[0]._sprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 4b87aa6bd5b57b1478a714c1c0d4a356,
+        type: 3}
     - target: {fileID: 6102941447742866688, guid: e65519a46e3ccb74682c26cbc558c22c,
         type: 3}
       propertyPath: _clips.Array.data[2]._onComplete.m_PersistentCalls.m_Calls.Array.size
@@ -9511,6 +9452,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoinBarrel (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6102941447742866700, guid: e65519a46e3ccb74682c26cbc558c22c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6102941447742866701, guid: e65519a46e3ccb74682c26cbc558c22c,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4b87aa6bd5b57b1478a714c1c0d4a356,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e65519a46e3ccb74682c26cbc558c22c, type: 3}
 --- !u!1001 &1133001134
@@ -9880,6 +9832,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door
       objectReference: {fileID: 0}
+    - target: {fileID: 3643483628319151506, guid: a304b36f78c2fd745b84b5d32a772301,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a304b36f78c2fd745b84b5d32a772301, type: 3}
 --- !u!4 &1294779130 stripped
@@ -10213,6 +10170,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6102941447742866688, guid: e65519a46e3ccb74682c26cbc558c22c,
         type: 3}
+      propertyPath: _clips.Array.data[0]._sprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 4b87aa6bd5b57b1478a714c1c0d4a356,
+        type: 3}
+    - target: {fileID: 6102941447742866688, guid: e65519a46e3ccb74682c26cbc558c22c,
+        type: 3}
       propertyPath: _clips.Array.data[2]._onComplete.m_PersistentCalls.m_Calls.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -10341,6 +10304,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoinBarrel
       objectReference: {fileID: 0}
+    - target: {fileID: 6102941447742866700, guid: e65519a46e3ccb74682c26cbc558c22c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6102941447742866701, guid: e65519a46e3ccb74682c26cbc558c22c,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4b87aa6bd5b57b1478a714c1c0d4a356,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e65519a46e3ccb74682c26cbc558c22c, type: 3}
 --- !u!1001 &1354868650
@@ -10541,6 +10515,7 @@ Transform:
   - {fileID: 1600480494}
   - {fileID: 872683659}
   - {fileID: 535182463}
+  - {fileID: 974157007}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12661,6 +12636,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6102941447742866688, guid: e65519a46e3ccb74682c26cbc558c22c,
         type: 3}
+      propertyPath: _clips.Array.data[0]._sprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 4b87aa6bd5b57b1478a714c1c0d4a356,
+        type: 3}
+    - target: {fileID: 6102941447742866688, guid: e65519a46e3ccb74682c26cbc558c22c,
+        type: 3}
       propertyPath: _clips.Array.data[2]._onComplete.m_PersistentCalls.m_Calls.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -12789,6 +12770,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoinBarrel (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6102941447742866700, guid: e65519a46e3ccb74682c26cbc558c22c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6102941447742866701, guid: e65519a46e3ccb74682c26cbc558c22c,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4b87aa6bd5b57b1478a714c1c0d4a356,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e65519a46e3ccb74682c26cbc558c22c, type: 3}
 --- !u!1001 &1608341908
@@ -12895,6 +12887,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DestructableBarrel (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6102941447742866700, guid: e65519a46e3ccb74682c26cbc558c22c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6102941447742866701, guid: e65519a46e3ccb74682c26cbc558c22c,
         type: 3}
@@ -13534,6 +13531,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tag: Player
+  _layer:
+    serializedVersion: 2
+    m_Bits: 4294967295
   _action:
     m_PersistentCalls:
       m_Calls:
@@ -13684,6 +13684,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6102941447742866688, guid: e65519a46e3ccb74682c26cbc558c22c,
         type: 3}
+      propertyPath: _clips.Array.data[0]._sprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 4b87aa6bd5b57b1478a714c1c0d4a356,
+        type: 3}
+    - target: {fileID: 6102941447742866688, guid: e65519a46e3ccb74682c26cbc558c22c,
+        type: 3}
       propertyPath: _clips.Array.data[2]._onComplete.m_PersistentCalls.m_Calls.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -13812,6 +13818,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoinBarrel (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6102941447742866700, guid: e65519a46e3ccb74682c26cbc558c22c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6102941447742866701, guid: e65519a46e3ccb74682c26cbc558c22c,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4b87aa6bd5b57b1478a714c1c0d4a356,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e65519a46e3ccb74682c26cbc558c22c, type: 3}
 --- !u!1001 &1766057556
@@ -15059,6 +15076,75 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1984857789
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1438691427}
+    m_Modifications:
+    - target: {fileID: 3241359431040961529, guid: ee562153f89400a4d88641cff681869b,
+        type: 3}
+      propertyPath: m_Name
+      value: Sword (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3577550046228319299, guid: ee562153f89400a4d88641cff681869b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3577550046228319299, guid: ee562153f89400a4d88641cff681869b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 16.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 3577550046228319299, guid: ee562153f89400a4d88641cff681869b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 3577550046228319299, guid: ee562153f89400a4d88641cff681869b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.49146062
+      objectReference: {fileID: 0}
+    - target: {fileID: 3577550046228319299, guid: ee562153f89400a4d88641cff681869b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3577550046228319299, guid: ee562153f89400a4d88641cff681869b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3577550046228319299, guid: ee562153f89400a4d88641cff681869b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3577550046228319299, guid: ee562153f89400a4d88641cff681869b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3577550046228319299, guid: ee562153f89400a4d88641cff681869b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3577550046228319299, guid: ee562153f89400a4d88641cff681869b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3577550046228319299, guid: ee562153f89400a4d88641cff681869b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ee562153f89400a4d88641cff681869b, type: 3}
 --- !u!1 &2016594928 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6102941447742866700, guid: e65519a46e3ccb74682c26cbc558c22c,
@@ -15761,6 +15847,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 287170098851073732, guid: f02f2f02aa32eb9498717d915c34c832,
         type: 3}
+      propertyPath: _throwCooldown._value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 287170098851073732, guid: f02f2f02aa32eb9498717d915c34c832,
+        type: 3}
       propertyPath: _cheats.Array.data[0].Action.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1749429659}
@@ -15802,12 +15893,12 @@ PrefabInstance:
     - target: {fileID: 287170098851073756, guid: f02f2f02aa32eb9498717d915c34c832,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.91
+      value: 31.32
       objectReference: {fileID: 0}
     - target: {fileID: 287170098851073756, guid: f02f2f02aa32eb9498717d915c34c832,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.01
+      value: 2.49
       objectReference: {fileID: 0}
     - target: {fileID: 287170098851073756, guid: f02f2f02aa32eb9498717d915c34c832,
         type: 3}

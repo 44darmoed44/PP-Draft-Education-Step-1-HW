@@ -1,5 +1,6 @@
 using System.Collections;
 using Scripts.Components;
+using TMPro;
 using UnityEditorInternal;
 using UnityEngine;
 
@@ -14,6 +15,7 @@ namespace Scripts.Creatures
         [SerializeField] private float _alarmDelay;
         [SerializeField] private float _attackCooldown;
         [SerializeField] private float _timeToDie;
+        [SerializeField] private float _timeToBackPatrol;
 
         private Coroutine _current;
         private GameObject _target;    
@@ -52,9 +54,17 @@ namespace Scripts.Creatures
 
         private IEnumerator AgroToPlayer()
         {
+            LookAtPlayer();
             _alarmParticle.Spawn("Alarm");
             yield return new WaitForSeconds(_alarmDelay);
             StartState(GoToPlayer());
+        }
+
+        private void LookAtPlayer()
+        {
+            var direction = GetDirectionToTarget();
+            _creature.SetDirection(Vector2.zero);
+            _creature.UpdateSpriteDirection(direction);
         }
 
 
@@ -73,6 +83,10 @@ namespace Scripts.Creatures
                 SetDirectionToTarget();
                 yield return null;
             }
+
+            _creature.SetDirection(Vector2.zero);
+            yield return new WaitForSeconds(_timeToBackPatrol);
+            StartState(_patrol.DoPatrol());
         }        
 
         private IEnumerator Attack()
@@ -88,9 +102,16 @@ namespace Scripts.Creatures
 
         private void SetDirectionToTarget()
         {
+            var direction = GetDirectionToTarget();
+            _creature.SetDirection(direction);
+        }
+
+        private Vector2 GetDirectionToTarget()
+        {
             var direction = _target.transform.position - transform.position;
             direction.y = 0;
-            _creature.SetDirection(direction.normalized);
+
+            return direction.normalized;
         }
 
         private void StartState(IEnumerator coroutine)

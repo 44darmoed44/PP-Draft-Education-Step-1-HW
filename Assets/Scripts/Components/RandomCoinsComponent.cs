@@ -48,13 +48,12 @@ namespace Scripts.Components
                 foreach (var coin in coinsList)
                 {
                     var position = new Vector3(_target.position.x+Random.Range(-0.5f, 0.5f), 
-                                                _target.position.y+Random.Range(-0.5f, 0.5f), 
+                                                _target.position.y+Random.Range(-0.1f, 0.5f), 
                                                 _target.position.z); 
 
                     var inst = Instantiate(coin.gameObject, position, Quaternion.identity);
-                    inst.AddComponent<Rigidbody2D>();
+                    inst.GetComponent<Rigidbody2D>().gravityScale = 1f;
                     inst.AddComponent<CapsuleCollider2D>();
-                    inst.GetComponent<Rigidbody2D>().freezeRotation = true;
                     inst.GetComponent<CapsuleCollider2D>().offset = new Vector2(0.01f, 0.01f);
                     inst.GetComponent<CapsuleCollider2D>().size = new Vector2(0.1f, 0.3f);
                 }

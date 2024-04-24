@@ -15,6 +15,7 @@ namespace Scripts
         
         [SerializeField] private SpawnComponent _particlesSpawner;
         [SerializeField] private SpawnComponent _attackParticlesSpawner;
+        [SerializeField] private CollectionSwordComponent _totalSwords;
 
         [SerializeField] private LayerCheck _groundCheck;
 
@@ -145,6 +146,7 @@ namespace Scripts
         public void ArmPlayer()
         {
             _session.Data.IsArmed = _playerInputReader._isArmed = true;
+            _totalSwords._totalNumSword += 1;
             UpdatePlayerWeapon();
         }
 
