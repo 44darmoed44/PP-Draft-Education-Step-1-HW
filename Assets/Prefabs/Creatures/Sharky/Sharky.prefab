@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 287170096929533886}
   - component: {fileID: 4361904110990793208}
   - component: {fileID: 7149512468576337982}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: AttackPosition
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 287170097026179004}
   - component: {fileID: 287170097026178978}
   - component: {fileID: 287170097026179005}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: LayerCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,7 +168,7 @@ GameObject:
   m_Component:
   - component: {fileID: 287170097621740249}
   - component: {fileID: 287170097621740254}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: ParticleSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 4646529324031185058}
   - component: {fileID: 8195487947918824080}
   - component: {fileID: 3379453}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Sharky
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -483,7 +483,7 @@ GameObject:
   - component: {fileID: 287170098900318760}
   - component: {fileID: 287170098900318763}
   - component: {fileID: 287170098900318762}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5294,7 +5294,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7951964413570426638}
   - component: {fileID: 1969776330830837123}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: AlarmParticleSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5342,7 +5342,7 @@ GameObject:
   - component: {fileID: 2222017905991526154}
   - component: {fileID: 459196647805511641}
   - component: {fileID: 981365158289479021}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Vision
   m_TagString: Untagged
   m_Icon: {fileID: 0}

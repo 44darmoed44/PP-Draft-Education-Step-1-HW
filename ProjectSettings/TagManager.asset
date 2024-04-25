@@ -21,8 +21,8 @@ TagManager:
   - Trash
   - Player
   - Barrel
-  - 
-  - 
+  - Enemies
+  - Totems
   - 
   - 
   - 
@@ -49,4 +49,7 @@ TagManager:
     locked: 0
   - name: Elevator
     uniqueID: 179659229
+    locked: 0
+  - name: Totems
+    uniqueID: 3620714859
     locked: 0

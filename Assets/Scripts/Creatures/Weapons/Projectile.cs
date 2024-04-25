@@ -1,25 +1,17 @@
-using UnityEngine;
 
 namespace Scripts.Creatures.Weapons
 {
-    public class Projectile : MonoBehaviour
+    public class Projectile : BaseProjectile
     {
-        [SerializeField] private float _speed;
-
-        private Rigidbody2D _rb;
-        private int _direction;
-
-        private void Start()
+        protected override void Start()
         {
-            _direction = transform.lossyScale.x > 0 ? 1 : -1;
-            _rb = GetComponent<Rigidbody2D>();
+            base.Start();
         }
 
-        private void FixedUpdate()
+        protected override void FixedUpdate()
         {
-            var position = _rb.position;
-            position.x += _direction * _speed;
-            _rb.MovePosition(position);
+            base.FixedUpdate();
+            _rb.MovePosition(_position);
         }
     }
 }

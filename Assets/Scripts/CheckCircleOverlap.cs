@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Scripts.Components;
 using Scripts.Utils;
 using UnityEditor;
 using UnityEngine;
@@ -22,6 +23,20 @@ namespace Scripts
             }
 
             return overlaps.ToArray();
+        }
+
+
+        public void Check(string tag, int value)
+        {
+            var gos = GetObjectsInRange();
+            foreach (var go in gos)
+            {
+                var hp = go.GetComponent<HealthComponent>();
+                if (hp != null && go.CompareTag(tag))
+                {
+                    hp.ModifyHealth(-value);
+                }
+            }
         }
 
         private void OnDrawGizmosSelected()
