@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 771145929396190615}
   - component: {fileID: 3817709815500567867}
   - component: {fileID: 2578938105919929360}
-  - component: {fileID: 1734473791977923261}
+  - component: {fileID: 6546881538104620719}
   m_Layer: 0
   m_Name: StackedSword
   m_TagString: Untagged
@@ -182,7 +182,7 @@ MonoBehaviour:
   _action:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1734473791977923261}
+      - m_Target: {fileID: 0}
         m_MethodName: ArmPlayer
         m_Mode: 0
         m_Arguments:
@@ -204,6 +204,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6546881538104620719}
+        m_MethodName: Add
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2578938105919929360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,7 +228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _objectToDestroy: {fileID: 5267798739461613790}
---- !u!114 &1734473791977923261
+--- !u!114 &6546881538104620719
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -226,6 +237,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 5267798739461613790}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae9b33208203d794dac39f2b1edd2fa4, type: 3}
+  m_Script: {fileID: 11500000, guid: f6cf8134cd877c3418511c81b9dc18a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _id: Sword
+  _value: 1

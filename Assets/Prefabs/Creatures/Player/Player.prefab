@@ -190,9 +190,8 @@ GameObject:
   - component: {fileID: 287170098851073735}
   - component: {fileID: 287170098851073734}
   - component: {fileID: 287170098851073732}
-  - component: {fileID: 287170098851073738}
   - component: {fileID: 5250970985417263391}
-  - component: {fileID: 5229637272607628763}
+  - component: {fileID: 7712315469837476944}
   m_Layer: 11
   m_Name: Player
   m_TagString: Player
@@ -318,6 +317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eeb3efb1598c6641bb0b5f571e7239e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _session: {fileID: 0}
   _playerMovement: {fileID: 287170098851073757}
   _attackRange: {fileID: 287170096929533881}
   _damage: 1
@@ -335,6 +335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec76c1d51db91a14d97ce9ac059115bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _session: {fileID: 0}
   _speed: 3
   _jumpScale: 12
   _isGrounded: 0
@@ -342,7 +343,6 @@ MonoBehaviour:
   _allowDoubleJump: 0
   _particlesSpawner: {fileID: 287170097621740254}
   _attackParticlesSpawner: {fileID: 287170096929533886}
-  _totalSwords: {fileID: 5229637272607628763}
   _groundCheck: {fileID: 287170097026178978}
   _armed: {fileID: 9100000, guid: 83d876cee13c9ab4398640854c7a853f, type: 2}
   _disarmed: {fileID: 9100000, guid: 9a1e1312ac078b9419af732f3ec13f11, type: 2}
@@ -422,9 +422,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4231ad50e41e04bb58c8526f130b75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _session: {fileID: 0}
   _damageJumpScale: 80
   _hitParticles: {fileID: 287170098900318763}
-  _playerCoins: {fileID: 0}
 --- !u!114 &287170098851073732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -437,6 +437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37254b4e159fac547a2cb210a436c6d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _session: {fileID: 0}
   _inputTimeToLive: 1.5
   _cheats:
   - Name: reset
@@ -458,23 +459,9 @@ MonoBehaviour:
   _interactionLayer:
     serializedVersion: 2
     m_Bits: 512
-  _totalSwords: {fileID: 5229637272607628763}
   _particles: {fileID: 2858370302749744872}
   _throwCooldown:
     _value: 1
---- !u!114 &287170098851073738
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 287170098851073758}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f81bf770cfe3a3b448875e57532da232, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _totalCoinsValue: 0
 --- !u!114 &5250970985417263391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -487,7 +474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 224ff461764ddec479f9c97dfe6bee9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5229637272607628763
+--- !u!114 &7712315469837476944
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -496,10 +483,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 287170098851073758}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db11d191293a51f42b67b54eb18a89a9, type: 3}
+  m_Script: {fileID: 11500000, guid: 2891222888ebf934fa0762c05bb9fb2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _totalNumSword: 0
+  _session: {fileID: 0}
 --- !u!1 &287170098900318757
 GameObject:
   m_ObjectHideFlags: 0

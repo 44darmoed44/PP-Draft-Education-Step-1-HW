@@ -1,4 +1,6 @@
-using Scripts.Components;
+using Scripts.Components.ColliderBase;
+using Scripts.Components.GoBased;
+using Scripts.Components.Health;
 using UnityEngine;
 
 namespace Scripts.Creatures
@@ -127,7 +129,7 @@ namespace Scripts.Creatures
             _animator.SetTrigger(AttackKey);
         }
 
-        public void OnDoAttack()
+        public virtual void OnDoAttack()
         {
             var gos = _attackRange.GetObjectsInRange();
             foreach (var go in gos)
