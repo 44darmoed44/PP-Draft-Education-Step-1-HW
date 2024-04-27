@@ -289,7 +289,6 @@ GameObject:
   m_Component:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
-  - component: {fileID: 519420029}
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
   m_Layer: 0
@@ -299,14 +298,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &519420029
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
 --- !u!114 &519420030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -873,44 +864,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Seesshell
       objectReference: {fileID: 0}
-    - target: {fileID: 1969776330830837123, guid: 8f0326c545f44e64598b581dbda41d3a,
-        type: 3}
-      propertyPath: _prefabs.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1969776330830837123, guid: 8f0326c545f44e64598b581dbda41d3a,
-        type: 3}
-      propertyPath: _prefabs.Array.data[0]
-      value: 
-      objectReference: {fileID: 9205728781201085904, guid: 23bf5d8a9767ab7438f896b8cba14b3f,
-        type: 3}
-    - target: {fileID: 1969776330830837123, guid: 8f0326c545f44e64598b581dbda41d3a,
-        type: 3}
-      propertyPath: _prefabs.Array.data[1]
-      value: 
-      objectReference: {fileID: 9205728781201085904, guid: 23bf5d8a9767ab7438f896b8cba14b3f,
-        type: 3}
-    - target: {fileID: 2222017905991526154, guid: 8f0326c545f44e64598b581dbda41d3a,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 6.7139993
-      objectReference: {fileID: 0}
-    - target: {fileID: 2222017905991526154, guid: 8f0326c545f44e64598b581dbda41d3a,
-        type: 3}
-      propertyPath: m_Offset.x
-      value: 2.8569996
-      objectReference: {fileID: 0}
-    - target: {fileID: 5344654727090111035, guid: 8f0326c545f44e64598b581dbda41d3a,
-        type: 3}
-      propertyPath: _prefabs.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5344654727090111035, guid: 8f0326c545f44e64598b581dbda41d3a,
-        type: 3}
-      propertyPath: _prefabs.Array.data[1]
-      value: 
-      objectReference: {fileID: 9205728781201085904, guid: 23bf5d8a9767ab7438f896b8cba14b3f,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f0326c545f44e64598b581dbda41d3a, type: 3}
 --- !u!1 &1403809553

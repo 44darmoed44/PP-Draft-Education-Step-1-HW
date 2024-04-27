@@ -1,11 +1,7 @@
 using System;
-using System.Net;
-using Scripts.Components;
-using Scripts.Components.Collectables;
 using Scripts.Components.GoBased;
 using Scripts.Components.Interactions;
 using Scripts.Utils;
-using TMPro.EditorUtilities;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -78,7 +74,6 @@ namespace Scripts.Player
 
         public void Throw()
         {
-            Debug.Log(SwordCount);
             if (_throwCooldown.IsReady && SwordCount > 1)
             {
                 _animator.SetTrigger(ThrowKey);
@@ -90,6 +85,7 @@ namespace Scripts.Player
         public void OnDoThrow()
         {
             _particles.Spawn("SwordThrow");
+            PlaySound("Range");
         }
 
         private void Update()

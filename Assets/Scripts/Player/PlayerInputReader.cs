@@ -74,12 +74,15 @@ namespace Scripts
             _session.Data.Inventory.Remove("Potion", 1);
 
             _healthComponent._health = _session.Data.Hp;
+
+            PlaySound("PotionUse");
         }
 
         private void OnAttack(InputAction.CallbackContext context)
         {
             if (!(SwordCount > 0)) return;
             _playerAnimator.SetTrigger(attackKey);
+            PlaySound("Melee");
         }
         
         public void Attack()

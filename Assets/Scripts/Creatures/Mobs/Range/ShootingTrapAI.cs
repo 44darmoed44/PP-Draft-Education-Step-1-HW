@@ -1,3 +1,4 @@
+using Scripts.Audio;
 using Scripts.Components.ColliderBase;
 using Scripts.Components.GoBased;
 using Scripts.Utils;
@@ -18,6 +19,7 @@ namespace Scripts.Creatures.Mobs.Range
         [SerializeField] protected Cooldown _rangeCooldown;
         [SerializeField] protected SpawnComponent _rangeAttack;       
         
+        protected PlaySoundsComponent _playSounds;
         protected Animator _animator;
         private static readonly int Melee = Animator.StringToHash("melee");
         protected static readonly int Range = Animator.StringToHash("range");
@@ -26,6 +28,7 @@ namespace Scripts.Creatures.Mobs.Range
         protected virtual void Awake()
         {
             _animator = GetComponent<Animator>();
+            _playSounds = GetComponent<PlaySoundsComponent>();
         }
 
         protected virtual void Update()

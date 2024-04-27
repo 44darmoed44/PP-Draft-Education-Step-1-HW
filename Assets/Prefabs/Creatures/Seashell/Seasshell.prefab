@@ -110,9 +110,9 @@ GameObject:
   - component: {fileID: 3379453}
   - component: {fileID: 6256845204475210520}
   - component: {fileID: 3919812530822895917}
-  - component: {fileID: 5722823690783535223}
   - component: {fileID: 270982359}
   - component: {fileID: 5344654727090111035}
+  - component: {fileID: 7522178186751884939}
   m_Layer: 13
   m_Name: Seasshell
   m_TagString: Enemy
@@ -134,6 +134,7 @@ Transform:
   - {fileID: 649907770903274593}
   - {fileID: 287170096929533880}
   - {fileID: 7951964413570426638}
+  - {fileID: 5696768657459166108}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -239,7 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 298efcaf4cb7a7342b5c7d001a90817e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 1
+  _health: 5
   _onDamage:
     m_PersistentCalls:
       m_Calls:
@@ -252,6 +253,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: hit
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7522178186751884939}
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Hurt
           m_BoolArgument: 0
         m_CallState: 2
   _isInvulnerable: 0
@@ -280,7 +292,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Death
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &3379453
@@ -351,51 +363,6 @@ MonoBehaviour:
   _rangeCooldown:
     _value: 2
   _rangeAttack: {fileID: 1969776330830837123}
---- !u!114 &5722823690783535223
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 287170098851073758}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 298efcaf4cb7a7342b5c7d001a90817e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _health: 2
-  _onDamage:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 287170098851073729}
-        m_MethodName: SetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: hit
-          m_BoolArgument: 0
-        m_CallState: 2
-  _isInvulnerable: 0
-  _onHeal:
-    m_PersistentCalls:
-      m_Calls: []
-  _onDie:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 270982359}
-        m_MethodName: DestroyObject
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &270982359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -424,6 +391,26 @@ MonoBehaviour:
   _target: {fileID: 287170098851073756}
   _prefabs:
   - {fileID: 1894113857539408997, guid: 8bb807dc2d75fbb4cb35dfb238ee2ee9, type: 3}
+--- !u!114 &7522178186751884939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287170098851073758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5a6844b075e86646ba4d783a7ddece0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _source: {fileID: 2344076810038140982}
+  _sounds:
+  - _id: Range
+    _clip: {fileID: 8300000, guid: e4138cebcbf57b342834a132b2b4a824, type: 3}
+  - _id: Hurt
+    _clip: {fileID: 8300000, guid: c859638dbac0bc244ba1ac76cc049d2a, type: 3}
+  - _id: Melee
+    _clip: {fileID: 8300000, guid: c712c7d33bfe7bc458e930aaaff5d254, type: 3}
 --- !u!1 &6596797680553441818
 GameObject:
   m_ObjectHideFlags: 0
@@ -469,7 +456,134 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _target: {fileID: 7951964413570426638}
   _prefabs:
-  - {fileID: 9205728781201085904, guid: cb86d19387e021845aac7a9e448a4e07, type: 3}
+  - {fileID: 9205728781201085904, guid: 23bf5d8a9767ab7438f896b8cba14b3f, type: 3}
+--- !u!1 &6820879950543735998
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5696768657459166108}
+  - component: {fileID: 2344076810038140982}
+  m_Layer: 13
+  m_Name: Vfx
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5696768657459166108
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6820879950543735998}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 287170098851073756}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &2344076810038140982
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6820879950543735998}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &8468264946835656464
 GameObject:
   m_ObjectHideFlags: 0
@@ -516,7 +630,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.5, y: 0.5}
+  m_Offset: {x: 2.8569996, y: 0.5}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -527,7 +641,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4, y: 2}
+  m_Size: {x: 6.7139993, y: 2}
   m_EdgeRadius: 0
 --- !u!114 &459196647805511641
 MonoBehaviour:

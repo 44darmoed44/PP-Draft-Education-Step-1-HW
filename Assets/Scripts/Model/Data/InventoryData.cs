@@ -17,7 +17,7 @@ namespace Scripts.Model.Data
 
         public void Add(string id, int value)
         {
-            if (CountNumItems() == _maxNumberOfItems)
+            if (CountNumItems() == _maxNumberOfItems && _maxNumberOfItems != 0)
             {
                 Debug.Log("Oops, it seems you don't have enough space in your inventory.");
                 return;

@@ -2192,7 +2192,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 423710625}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.57, y: 5.99, z: -10}
+  m_LocalPosition: {x: 10.53, y: 7, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1768260656}
@@ -2594,7 +2594,6 @@ GameObject:
   m_Component:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
-  - component: {fileID: 519420029}
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
   m_Layer: 0
@@ -2604,14 +2603,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &519420029
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
 --- !u!114 &519420030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2683,7 +2674,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.57, y: 5.99, z: -10}
+  m_LocalPosition: {x: 10.53, y: 7, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -14554,7 +14545,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _data:
     _inventory:
-      _maxNumberOfItems: 5
+      _maxNumberOfItems: 0
       _inventory: []
     Hp: 5
 --- !u!4 &1804363619
@@ -16297,12 +16288,12 @@ PrefabInstance:
     - target: {fileID: 287170098851073756, guid: f02f2f02aa32eb9498717d915c34c832,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.57
+      value: 10.53
       objectReference: {fileID: 0}
     - target: {fileID: 287170098851073756, guid: f02f2f02aa32eb9498717d915c34c832,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.99
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 287170098851073756, guid: f02f2f02aa32eb9498717d915c34c832,
         type: 3}
