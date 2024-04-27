@@ -20,18 +20,19 @@ namespace Scripts.Creatures
         [SerializeField] private CheckCircleOverlap _attackRange;
         [SerializeField] protected SpawnComponent _particles;
 
-        protected Rigidbody2D _rigidbody;
+        public Rigidbody2D _rigidbody;
         protected Vector2 Direction;
         protected Animator _animator;
         private bool _isGrounded;
         private bool _isJumping;
-
         
         private static readonly int IsGroundKey = Animator.StringToHash("isGrounded");
         private static readonly int IsRunningKey = Animator.StringToHash("isRunning");
         private static readonly int VetricalVelocityKey = Animator.StringToHash("vetricalVelocity");
         private static readonly int Hit = Animator.StringToHash("Hit");
+        private static readonly int DeadKey = Animator.StringToHash("is-dead");
         private static readonly int AttackKey = Animator.StringToHash("Attack");
+        
 
 
         protected virtual void Awake()
@@ -124,8 +125,15 @@ namespace Scripts.Creatures
             _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, _damageVelocity);   
         }
 
+        public void OnDead()
+        {
+            _rigidbody.velocity = Vector2.zero;
+            _animator.SetTrigger(DeadKey);
+        }
+
         public virtual void Attack()
         {
+            _rigidbody.velocity = Vector2.zero;
             _animator.SetTrigger(AttackKey);
         }
 

@@ -22,6 +22,7 @@ namespace Scripts.Creatures
 
         private Creature _creature;
         private Animator _animator;
+        private DestroyObjectComponent _destroer;
 
         private static readonly int IsDeadKey = Animator.StringToHash("is-dead");
 
@@ -34,19 +35,23 @@ namespace Scripts.Creatures
             _creature = GetComponent<Creature>();
             _animator = GetComponent<Animator>();
             _patrol = GetComponent<Patrol>();
+            _destroer = GetComponent<DestroyObjectComponent>();
         }
 
 
         private void Start()
         {
-            StartState(_patrol.DoPatrol());
+            if (_patrol != null) StartState(_patrol.DoPatrol());
         }
 
 
         public void OnPlayerInVision(GameObject go)
         {
-            if (_isDead) return;
-
+            if (_isDead) 
+            {
+                _creature._rigidbody.velocity = Vector2.zero;
+                return;
+            }
             _target = go;
 
             StartState(AgroToPlayer());
@@ -67,7 +72,6 @@ namespace Scripts.Creatures
             _creature.UpdateSpriteDirection(direction);
         }
 
-
         private IEnumerator GoToPlayer()
         {
             while (_vision.IsTouchingLayer)
@@ -86,7 +90,7 @@ namespace Scripts.Creatures
 
             _creature.SetDirection(Vector2.zero);
             yield return new WaitForSeconds(_timeToBackPatrol);
-            StartState(_patrol.DoPatrol());
+            if (_patrol != null) StartState(_patrol.DoPatrol());
         }        
 
         private IEnumerator Attack()
@@ -134,7 +138,7 @@ namespace Scripts.Creatures
         {
             yield return new WaitForSeconds(_timeToDie);
 
-            Destroy(gameObject); 
+            _destroer.DestroyObject();
         }
     }
 }

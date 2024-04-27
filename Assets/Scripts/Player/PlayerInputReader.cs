@@ -82,7 +82,6 @@ namespace Scripts
         {
             if (!(SwordCount > 0)) return;
             _playerAnimator.SetTrigger(attackKey);
-            PlaySound("Melee");
         }
         
         public void Attack()
