@@ -71,6 +71,15 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""OnPause"",
+                    ""type"": ""Button"",
+                    ""id"": ""3f3ffd1f-f1fe-4ce5-a7f1-32d39af6b102"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -172,6 +181,17 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
                     ""action"": ""OnUseItems"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""de4b055b-c2da-4e8d-85f2-4b63c7aa19ca"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""OnPause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -185,6 +205,7 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
         m_Player_OnInteract = m_Player.FindAction("OnInteract", throwIfNotFound: true);
         m_Player_Throw = m_Player.FindAction("Throw", throwIfNotFound: true);
         m_Player_OnUseItems = m_Player.FindAction("OnUseItems", throwIfNotFound: true);
+        m_Player_OnPause = m_Player.FindAction("OnPause", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -249,6 +270,7 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_OnInteract;
     private readonly InputAction m_Player_Throw;
     private readonly InputAction m_Player_OnUseItems;
+    private readonly InputAction m_Player_OnPause;
     public struct PlayerActions
     {
         private @PlayerInputAction m_Wrapper;
@@ -258,6 +280,7 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
         public InputAction @OnInteract => m_Wrapper.m_Player_OnInteract;
         public InputAction @Throw => m_Wrapper.m_Player_Throw;
         public InputAction @OnUseItems => m_Wrapper.m_Player_OnUseItems;
+        public InputAction @OnPause => m_Wrapper.m_Player_OnPause;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -282,6 +305,9 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
                 @OnUseItems.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOnUseItems;
                 @OnUseItems.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOnUseItems;
                 @OnUseItems.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOnUseItems;
+                @OnPause.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOnPause;
+                @OnPause.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOnPause;
+                @OnPause.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOnPause;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -301,6 +327,9 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
                 @OnUseItems.started += instance.OnOnUseItems;
                 @OnUseItems.performed += instance.OnOnUseItems;
                 @OnUseItems.canceled += instance.OnOnUseItems;
+                @OnPause.started += instance.OnOnPause;
+                @OnPause.performed += instance.OnOnPause;
+                @OnPause.canceled += instance.OnOnPause;
             }
         }
     }
@@ -312,5 +341,6 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
         void OnOnInteract(InputAction.CallbackContext context);
         void OnThrow(InputAction.CallbackContext context);
         void OnOnUseItems(InputAction.CallbackContext context);
+        void OnOnPause(InputAction.CallbackContext context);
     }
 }

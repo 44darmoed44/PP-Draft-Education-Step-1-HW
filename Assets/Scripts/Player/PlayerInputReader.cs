@@ -2,6 +2,7 @@
 using Scripts.Components.ColliderBase;
 using Scripts.Components.Health;
 using Scripts.Player;
+using Scripts.UI.MainMenu;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.TestTools;
@@ -38,6 +39,8 @@ namespace Scripts
             inputActions.Player.Throw.performed += OnThrow;
 
             inputActions.Player.OnUseItems.performed += OnUseItems;
+
+            inputActions.Player.OnPause.performed += OnPause;
         }
 
         private void OnDestroy()
@@ -52,6 +55,8 @@ namespace Scripts
             inputActions.Player.Throw.performed -= OnThrow;
 
             inputActions.Player.OnUseItems.performed -= OnUseItems;
+
+            inputActions.Player.OnPause.performed -= OnPause;
         }
 
         private void OnEnable()
@@ -107,6 +112,21 @@ namespace Scripts
         private void OnThrow(InputAction.CallbackContext context)
         {
             _playerController.Throw();
+        }
+
+        public void OnPause(InputAction.CallbackContext context)
+        {
+            var pauseWindow = FindObjectOfType<MainMenuWindow>();
+            if (pauseWindow != null)
+            {
+                pauseWindow.Close();
+            }
+            else
+            {
+                var window = Resources.Load<GameObject>("UI/PauseMenuWindow");
+                var canvas = FindObjectOfType<Canvas>();
+                Instantiate(window, canvas.transform);
+            }
         }
 
     }

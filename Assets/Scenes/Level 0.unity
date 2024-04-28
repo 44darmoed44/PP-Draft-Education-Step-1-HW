@@ -338,18 +338,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 491185850}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &350979139 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5663749350965693477, guid: 9885b5255fc4ef140a1db748d36328e7,
-    type: 3}
-  m_PrefabInstance: {fileID: 8616532874863625208}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6121bfb8ada9409478bad08df8c8867a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &423710625
 GameObject:
   m_ObjectHideFlags: 0
@@ -508,9 +496,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f1c7f0a63145424893ff53a48f76b3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _groundLayer:
+  _layer:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 0
   IsTouchingLayer: 0
 --- !u!1001 &491185850
 PrefabInstance:
@@ -7608,6 +7596,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tag: Player
+  _layer:
+    serializedVersion: 2
+    m_Bits: 4294967295
   _action:
     m_PersistentCalls:
       m_Calls:
@@ -12748,12 +12739,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec76c1d51db91a14d97ce9ac059115bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _session: {fileID: 0}
   _speed: 3
   _jumpScale: 12
   _isGrounded: 0
+  _isSpawnFallParticle: 0
   _allowDoubleJump: 0
   _particlesSpawner: {fileID: 813844332}
+  _attackParticlesSpawner: {fileID: 0}
   _groundCheck: {fileID: 486928912}
+  _armed: {fileID: 0}
+  _disarmed: {fileID: 0}
 --- !u!114 &1853367152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12766,7 +12762,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eeb3efb1598c6641bb0b5f571e7239e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _session: {fileID: 0}
   _playerMovement: {fileID: 1853367151}
+  _attackRange: {fileID: 0}
+  _damage: 0
+  _playerAnimator: {fileID: 0}
 --- !u!50 &1853367153
 Rigidbody2D:
   serializedVersion: 4
@@ -12835,10 +12835,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4231ad50e41e04bb58c8526f130b75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _session: {fileID: 0}
   _damageJumpScale: 80
-  _isInvulnerable: 0
   _hitParticles: {fileID: 1833490329}
-  _playerCoins: {fileID: 0}
 --- !u!114 &1853367157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12866,6 +12865,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _isInvulnerable: 0
   _onHeal:
     m_PersistentCalls:
       m_Calls:
@@ -12906,6 +12906,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37254b4e159fac547a2cb210a436c6d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _session: {fileID: 0}
   _inputTimeToLive: 1.5
   _cheats:
   - Name: reset
@@ -12927,6 +12928,9 @@ MonoBehaviour:
   _interactionLayer:
     serializedVersion: 2
     m_Bits: 512
+  _particles: {fileID: 0}
+  _throwCooldown:
+    _value: 0
 --- !u!114 &1853367159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13805,7 +13809,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _action.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 350979139}
+      objectReference: {fileID: 0}
     - target: {fileID: 8457193476115529336, guid: 9885b5255fc4ef140a1db748d36328e7,
         type: 3}
       propertyPath: _action.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
