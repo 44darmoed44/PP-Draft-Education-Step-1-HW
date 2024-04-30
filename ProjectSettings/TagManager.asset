@@ -7,6 +7,7 @@ TagManager:
   - GoldenCoin
   - SilverCoin
   - Enemy
+  - SfxAudioSource
   layers:
   - Default
   - TransparentFX

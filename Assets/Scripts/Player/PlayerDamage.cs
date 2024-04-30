@@ -20,6 +20,11 @@ namespace Scripts.Player
             _healthComponent = GetComponent<HealthComponent>();
         }
 
+        private void Start()
+        {
+            _session.Data.Hp.Value = _healthComponent._health;
+        }
+
         private void SpawnParticles()
         {
             var numCoinsToDispose = Mathf.Min(CoinsCount, 5);
@@ -38,7 +43,7 @@ namespace Scripts.Player
             _animator.SetTrigger(HitKey);
             _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, _damageJumpScale);
 
-            _session.Data.Hp = _healthComponent._health;
+            _session.Data.Hp.Value = _healthComponent._health;
 
             if (CoinsCount > 0)
             {

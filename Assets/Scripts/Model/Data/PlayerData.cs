@@ -1,4 +1,5 @@
 using System;
+using Scripts.Model.Data.Properties;
 using UnityEngine;
 
 namespace Scripts.Model.Data
@@ -10,7 +11,7 @@ namespace Scripts.Model.Data
 
         public InventoryData Inventory => _inventory;
 
-        public int Hp;
+        public IntProperty Hp = new IntProperty(1);
 
         public PlayerData Clone()
         {

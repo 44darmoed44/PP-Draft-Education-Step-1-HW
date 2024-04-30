@@ -1,6 +1,7 @@
 ﻿using JetBrains.Annotations;
 using Scripts.Components.ColliderBase;
 using Scripts.Components.Health;
+using Scripts.Model.Definitions;
 using Scripts.Player;
 using Scripts.UI.MainMenu;
 using UnityEngine;
@@ -75,10 +76,14 @@ namespace Scripts
             var item = _session.Data.Inventory.GetItem("Potion");
             if (item == null) return;
 
-            _session.Data.Hp += 5;
+        
+
+            _session.Data.Hp.Value += 5;
+            if (_session.Data.Hp.Value > DefsFacade.I.Player.MAXHealth) 
+                _session.Data.Hp.Value = DefsFacade.I.Player.MAXHealth;
             _session.Data.Inventory.Remove("Potion", 1);
 
-            _healthComponent._health = _session.Data.Hp;
+            _healthComponent._health = _session.Data.Hp.Value;
 
             PlaySound("PotionUse");
         }

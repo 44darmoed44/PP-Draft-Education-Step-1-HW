@@ -1,5 +1,5 @@
 using JetBrains.Annotations;
-using Scripts.Audio;
+using Scripts.Components.Audio;
 using Scripts.Model;
 using UnityEngine;
 

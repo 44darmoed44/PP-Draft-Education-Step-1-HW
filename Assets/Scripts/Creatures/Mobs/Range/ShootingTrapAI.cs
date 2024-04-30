@@ -1,4 +1,4 @@
-using Scripts.Audio;
+using Scripts.Components.Audio;
 using Scripts.Components.ColliderBase;
 using Scripts.Components.GoBased;
 using Scripts.Utils;

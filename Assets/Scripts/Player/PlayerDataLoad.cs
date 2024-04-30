@@ -13,7 +13,7 @@ namespace Scripts.Player
 
         private void Start()
         {
-            _healthComponent._health = _session.Data.Hp;
+            _healthComponent._health = _session.Data.Hp.Value;
         }
     }
 }
