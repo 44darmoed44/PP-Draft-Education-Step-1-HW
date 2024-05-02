@@ -11,7 +11,7 @@ namespace Scripts.Player
             _healthComponent = GetComponent<HealthComponent>();
         }
 
-        private void Start()
+        protected override void Start()
         {
             _healthComponent._health = _session.Data.Hp.Value;
         }

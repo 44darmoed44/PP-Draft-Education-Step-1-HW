@@ -15,7 +15,7 @@ namespace Scripts.Player
 
         private PlaySoundsComponent _playSounds;
 
-        private void Start()
+        protected virtual void Start()
         {
             _session = FindObjectOfType<GameSession>();
             _session.Data.Inventory.OnChanged += OnInventoryChanged;

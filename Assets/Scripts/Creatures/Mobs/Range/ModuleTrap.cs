@@ -14,7 +14,8 @@ namespace Scripts.Creatures.Mobs.Range
 
         public void DoRangeAttack()
         {
-            _rangeAttack.Spawn("WoodSpike");
+            _rangeAttack.SetPrefabName("WoodSpike");
+            _rangeAttack.Spawn();
         }
     }
 }

@@ -48,7 +48,8 @@ namespace Scripts.Creatures
 
         public void SpawnRunParticles()
         {
-            _particles.Spawn("Run");
+            _particles.SetPrefabName("Run");
+            _particles.Spawn();
         }
 
         protected virtual void Update()
@@ -112,7 +113,8 @@ namespace Scripts.Creatures
             if (_isGrounded)
             {
                 yVelocity = _jumpVelocity;
-                _particles.Spawn("Jump");
+                _particles.SetPrefabName("Jump");
+                _particles.Spawn();
             }
 
             return yVelocity;

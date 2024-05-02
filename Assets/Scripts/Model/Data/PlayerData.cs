@@ -11,7 +11,7 @@ namespace Scripts.Model.Data
 
         public InventoryData Inventory => _inventory;
 
-        public IntProperty Hp = new IntProperty(1);
+        public IntProperty Hp = new IntProperty();
 
         public PlayerData Clone()
         {

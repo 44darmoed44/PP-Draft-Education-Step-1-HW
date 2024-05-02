@@ -1,6 +1,8 @@
 using System;
+using System.Runtime.Serialization;
 using Scripts.Components.GoBased;
 using Scripts.Components.Interactions;
+using Scripts.Model.Definitions;
 using Scripts.Utils;
 using UnityEngine;
 using UnityEngine.Events;
@@ -16,7 +18,7 @@ namespace Scripts.Player
         [SerializeField] private float _interactionRadius;
         [SerializeField] private LayerMask _interactionLayer;
         
-        [SerializeField] private SpawnComponent _particles;
+        [SerializeField] private SpawnComponent _throwSpawner;
 
         [SerializeField] private Cooldown _throwCooldown;
 
@@ -26,6 +28,20 @@ namespace Scripts.Player
 
         private static readonly int ThrowKey = Animator.StringToHash("Throw");
         private Animator _animator;
+
+        private string SelectedItemId => _session.QuickInventory.SelectedItem.Id;
+
+        private bool CanThrow
+        {
+            get
+            {
+                if (SelectedItemId == "Sword") return SwordCount > 1;
+
+                var def = DefsFacade.I.Items.Get(SelectedItemId);
+                return def.HashTag(ItemTag.Throwable);
+            }
+        }
+
 
         private void Awake()
         {
@@ -74,17 +90,20 @@ namespace Scripts.Player
 
         public void Throw()
         {
-            if (_throwCooldown.IsReady && SwordCount > 1)
+            if (_throwCooldown.IsReady && CanThrow)
             {
                 _animator.SetTrigger(ThrowKey);
                 _throwCooldown.Reset();
-                _session.Data.Inventory.Remove("Sword", 1);
             }
         }
 
         public void OnDoThrow()
         {
-            _particles.Spawn("SwordThrow");
+            var throwableId = _session.QuickInventory.SelectedItem.Id;
+            var throwableDef = DefsFacade.I.Throwable.Get(throwableId);
+            _throwSpawner.SetPrefab(throwableDef.Projectile);
+            _throwSpawner.Spawn();
+            _session.Data.Inventory.Remove(throwableId, 1);
             PlaySound("Range");
         }
 

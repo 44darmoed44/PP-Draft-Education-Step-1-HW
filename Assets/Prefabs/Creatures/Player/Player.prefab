@@ -471,7 +471,7 @@ MonoBehaviour:
   _interactionLayer:
     serializedVersion: 2
     m_Bits: 512
-  _particles: {fileID: 2858370302749744872}
+  _throwSpawner: {fileID: 2858370302749744872}
   _throwCooldown:
     _value: 1
 --- !u!114 &5250970985417263391
@@ -511,7 +511,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5a6844b075e86646ba4d783a7ddece0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _source: {fileID: 7407729476179619124}
   _sounds:
   - _id: Jump
     _clip: {fileID: 8300000, guid: b1a207c0259e0e24da1b3ec29f0b8949, type: 3}
@@ -5483,7 +5482,7 @@ GameObject:
   - component: {fileID: 4892778021407681654}
   - component: {fileID: 2858370302749744872}
   m_Layer: 11
-  m_Name: ThrowSwordSpawnPoint
+  m_Name: ThrowSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -5518,3 +5517,4 @@ MonoBehaviour:
   _target: {fileID: 4892778021407681654}
   _prefabs:
   - {fileID: 5267798739461613790, guid: 8ca469be39367bf4bbc935ca73dde291, type: 3}
+  - {fileID: 9205728781201085904, guid: 78f7b9874d1f59a47ab1a158302b65ee, type: 3}

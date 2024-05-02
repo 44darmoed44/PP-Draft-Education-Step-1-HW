@@ -4,6 +4,7 @@ using Scripts.Components.Health;
 using Scripts.Model.Definitions;
 using Scripts.Player;
 using Scripts.UI.MainMenu;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.TestTools;
@@ -39,9 +40,11 @@ namespace Scripts
 
             inputActions.Player.Throw.performed += OnThrow;
 
-            inputActions.Player.OnUseItems.performed += OnUseItems;
+            inputActions.Player.OnUseItem.performed += OnUseItems;
 
             inputActions.Player.OnPause.performed += OnPause;
+
+            inputActions.Player.NextItem.performed += OnNextItem;
         }
 
         private void OnDestroy()
@@ -55,9 +58,11 @@ namespace Scripts
 
             inputActions.Player.Throw.performed -= OnThrow;
 
-            inputActions.Player.OnUseItems.performed -= OnUseItems;
+            inputActions.Player.OnUseItem.performed -= OnUseItems;
 
             inputActions.Player.OnPause.performed -= OnPause;
+
+            inputActions.Player.NextItem.performed -= OnNextItem;
         }
 
         private void OnEnable()
@@ -73,19 +78,30 @@ namespace Scripts
 
         private void OnUseItems(InputAction.CallbackContext context)
         {
-            var item = _session.Data.Inventory.GetItem("Potion");
-            if (item == null) return;
 
-        
+            var potionId = _session.QuickInventory.SelectedItem.Id;
+            var healthChangeValue = 0;
 
-            _session.Data.Hp.Value += 5;
-            if (_session.Data.Hp.Value > DefsFacade.I.Player.MAXHealth) 
-                _session.Data.Hp.Value = DefsFacade.I.Player.MAXHealth;
-            _session.Data.Inventory.Remove("Potion", 1);
+            if (potionId.Contains("Potion"))
+            {
+                if (potionId.Contains("Small"))
+                {
+                    healthChangeValue = 2;
+                }
+                else if (potionId.Contains("Big"))
+                {
+                    healthChangeValue = 5;
+                }
 
-            _healthComponent._health = _session.Data.Hp.Value;
+                _session.Data.Hp.Value += healthChangeValue;
+                if (_session.Data.Hp.Value > DefsFacade.I.Player.MAXHealth) 
+                    _session.Data.Hp.Value = DefsFacade.I.Player.MAXHealth;
+                _session.Data.Inventory.Remove(potionId, 1);
 
-            PlaySound("PotionUse");
+                _healthComponent._health = _session.Data.Hp.Value;
+
+                PlaySound("PotionUse");
+            }
         }
 
         private void OnAttack(InputAction.CallbackContext context)
@@ -117,6 +133,11 @@ namespace Scripts
         private void OnThrow(InputAction.CallbackContext context)
         {
             _playerController.Throw();
+        }
+
+        private void OnNextItem(InputAction.CallbackContext context)
+        {
+            _session.QuickInventory.SetNextItem();
         }
 
         public void OnPause(InputAction.CallbackContext context)

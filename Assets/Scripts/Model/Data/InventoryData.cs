@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Scripts.Model.Definitions;
 using UnityEngine;
 
@@ -38,6 +39,18 @@ namespace Scripts.Model.Data
             item.Value += value;
 
             OnChanged?.Invoke(id, value);
+        }
+
+        public InventoryItemData[] GetAll(params ItemTag[] tags)
+        {
+            var retValue = new List<InventoryItemData>();
+            foreach (var item in _inventory)
+            {
+                var itemDef = DefsFacade.I.Items.Get(item.Id);
+                var isAllRequiremetsMet = tags.All(x => itemDef.HashTag(x));
+                if (isAllRequiremetsMet) retValue.Add(item);
+            }
+            return retValue.ToArray();
         }
 
         public void Remove(string id, int value)

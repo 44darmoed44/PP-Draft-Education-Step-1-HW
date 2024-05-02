@@ -20,8 +20,9 @@ namespace Scripts.Player
             _healthComponent = GetComponent<HealthComponent>();
         }
 
-        private void Start()
+        protected override void Start()
         {
+            base.Start();
             _session.Data.Hp.Value = _healthComponent._health;
         }
 

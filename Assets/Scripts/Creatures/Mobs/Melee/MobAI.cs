@@ -60,7 +60,8 @@ namespace Scripts.Creatures
         private IEnumerator AgroToPlayer()
         {
             LookAtPlayer();
-            _alarmParticle.Spawn("Alarm");
+            _alarmParticle.SetPrefabName("Alarm");
+            _alarmParticle.Spawn();
             yield return new WaitForSeconds(_alarmDelay);
             StartState(GoToPlayer());
         }

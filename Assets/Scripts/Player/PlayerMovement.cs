@@ -124,24 +124,28 @@ namespace Scripts.Player
 
         public void FootStepsParticlesSpawner()
         {
-            _particlesSpawner.Spawn("FootStepsParticle");
+            _particlesSpawner.SetPrefabName("FootStepsParticle");
+            _particlesSpawner.Spawn();
         }
 
 
         public void JumpParticlesSpawner()
         {
-            _particlesSpawner.Spawn("JumpParticle");
+            _particlesSpawner.SetPrefabName("JumpParticle");
+            _particlesSpawner.Spawn();
         }
 
 
         private void FallParticleSpawner()
         {
-            _particlesSpawner.Spawn("FallParticle");
+            _particlesSpawner.SetPrefabName("FallParticle");
+            _particlesSpawner.Spawn();
         }
 
         private void AttackParticleSpawner()
         {
-            _attackParticlesSpawner.Spawn("SwordAttackParticle");
+            _attackParticlesSpawner.SetPrefabName("SwordAttackParticle");
+            _attackParticlesSpawner.Spawn();
         }
 
         private void UpdatePlayerWeapon()

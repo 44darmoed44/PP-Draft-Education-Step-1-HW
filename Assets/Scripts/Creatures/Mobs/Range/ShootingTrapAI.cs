@@ -70,7 +70,8 @@ namespace Scripts.Creatures.Mobs.Range
 
         public void OnRangeAttack()
         {
-            _rangeAttack.Spawn("PerlThrowSin");
+            _rangeAttack.SetPrefabName("PerlThrowSin");
+            _rangeAttack.Spawn();
         }
     }
 }
