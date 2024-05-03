@@ -14759,7 +14759,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _data:
     _inventory:
-      _maxNumberOfItems: 5
+      _maxNumberOfItems: 0
       _inventory:
       - Id: Coin
         Value: 23
@@ -14844,6 +14844,36 @@ PrefabInstance:
         type: 3}
       propertyPath: _requied.Array.data[0].Value
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 846445142160308512, guid: c4f1850febe656644b4b55492f46e51d,
+        type: 3}
+      propertyPath: _onFail.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 846445142160308512, guid: c4f1850febe656644b4b55492f46e51d,
+        type: 3}
+      propertyPath: _onFail.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 846445142160308512, guid: c4f1850febe656644b4b55492f46e51d,
+        type: 3}
+      propertyPath: _onFail.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2086167483}
+    - target: {fileID: 846445142160308512, guid: c4f1850febe656644b4b55492f46e51d,
+        type: 3}
+      propertyPath: _onFail.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 846445142160308512, guid: c4f1850febe656644b4b55492f46e51d,
+        type: 3}
+      propertyPath: _onFail.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Show
+      objectReference: {fileID: 0}
+    - target: {fileID: 846445142160308512, guid: c4f1850febe656644b4b55492f46e51d,
+        type: 3}
+      propertyPath: _onFail.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5781494166758852826, guid: c4f1850febe656644b4b55492f46e51d,
         type: 3}
@@ -15810,6 +15840,30 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2086167482 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5781494166758852826, guid: c4f1850febe656644b4b55492f46e51d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1837175543}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2086167483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086167482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eea5eb371f7f8149b7ac1258deacdd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mode: 0
+  _bound:
+    _sentences:
+    - To open me you need a key
+    - Try to find it!
+  _external: {fileID: 0}
 --- !u!1 &2093463540
 GameObject:
   m_ObjectHideFlags: 0
