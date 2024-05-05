@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Scripts.UI
+namespace Scripts.UI.HUD.Windows
 {
     public class AnimatedWindow : MonoBehaviour
     {

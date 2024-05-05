@@ -1,6 +1,7 @@
 using System;
 using Scripts.Model.Data;
 using Scripts.Model.Definitions;
+using Scripts.Model.Definitions.Localozation;
 using Scripts.UI.HUD.Dialog;
 using UnityEngine;
 
@@ -12,7 +13,21 @@ namespace Scripts.Components.Dialogs
         [SerializeField] private DialogData _bound;
         [SerializeField] private DialogDef _external;
 
+        [SerializeField] private string _key;
+        
         private DialogBoxController _dialogBox;
+
+        private void Start()
+        {
+            LocalisationManager.I.OnLocaleChanged += OnLocaleChanged;
+            OnLocaleChanged();
+        }
+
+        private void OnLocaleChanged()
+        {
+            var sents = LocalisationManager.I.Locolize(_key).Split('&');
+            _external.Data.ChangeSentences(sents);
+        }
 
         public void Show()
         {
@@ -23,7 +38,18 @@ namespace Scripts.Components.Dialogs
         public void Show(DialogDef def)
         {
             _external = def;
+            OnLocaleChanged();
             Show();
+        }
+
+        public void SetKey(string key)
+        {
+            _key = key;
+        }
+
+        public void OnDestroy()
+        {
+            LocalisationManager.I.OnLocaleChanged -= OnLocaleChanged;
         }
 
         public DialogData Data

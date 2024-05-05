@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 196e9e9dc2973334aaea4c2ae6c3a680
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Inky Thin Pixels(MONKEYBOY)
+  fontNames:
+  - Inky Thin Pixels(MONKEYBOY)
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

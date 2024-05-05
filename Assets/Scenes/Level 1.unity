@@ -15858,12 +15858,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eea5eb371f7f8149b7ac1258deacdd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mode: 0
+  _mode: 1
   _bound:
-    _sentences:
-    - To open me you need a key
-    - Try to find it!
-  _external: {fileID: 0}
+    _sentences: []
+  _external: {fileID: 11400000, guid: 02ecc797eca97c946ac607d1f49b43e4, type: 2}
+  _key: wooden_door_dialog
 --- !u!1 &2093463540
 GameObject:
   m_ObjectHideFlags: 0

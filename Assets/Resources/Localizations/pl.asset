@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd739ee5bbe780344945eb93e274cf0b, type: 3}
+  m_Name: pl
+  m_EditorClassIdentifier: 
+  _url: https://docs.google.com/spreadsheets/d/e/2PACX-1vSyzUH4mcQHJnPiygb3iObEH4hBbu1IELNpJJotP2JbBx-gZ73xkzJYuhV1sz11VoBNCd6M4HFaqNmq/pub?gid=707468474&single=true&output=tsv
+  _localItems:
+  - Key: main_menu_text
+    Value: "Menu g\u0142\xF3wne\r"
+  - Key: pause_menu_text
+    Value: "Pauza\r"
+  - Key: options_menu_text
+    Value: "Ustawienia\r"
+  - Key: language_menu_text
+    Value: "J\u0119zyk\r"
+  - Key: music_option_text
+    Value: "Muzyka\r"
+  - Key: sfx_option_text
+    Value: "D\u017Awi\u0119ki\r"
+  - Key: start_button
+    Value: "GRA\u0106\r"
+  - Key: options_button
+    Value: "USTAWIENIA\r"
+  - Key: resume_button
+    Value: "KONTYNUOWA\u0106\r"
+  - Key: restart_button
+    Value: "PONOWNIE\r"
+  - Key: back_button
+    Value: "ZWROT\r"
+  - Key: exit_button
+    Value: "WYJ\u015ACIE\r"
+  - Key: dialog_continue_button
+    Value: "Kontynuowa\u0107...\r"
+  - Key: wooden_door_dialog
+    Value: "B\u0119dziesz potrzebowa\u0142 klucza, \u017Ceby mnie otworzy\u0107!&Spr\xF3buj
+      go znale\u017A\u0107!\r"
+  - Key: crabNPC_dialog_fail
+    Value: "Daj mi 20 monet....&a poka\u017C\u0119 ci sztuczk\u0119!\r"
+  - Key: crabNPC_dialog_success
+    Value: A teraz sztuczka!&Ja mam monety...&a ty nie!!!&AHAHAHAHAHAHAHA

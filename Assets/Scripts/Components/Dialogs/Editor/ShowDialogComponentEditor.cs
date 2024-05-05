@@ -26,6 +26,7 @@ namespace Scripts.Components.Dialogs.Editor
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("_bound"));
                         break;
                     case ShowDialogComponent.Mode.External:
+                        EditorGUILayout.PropertyField(serializedObject.FindProperty("_key"));
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("_external"));
                         break;
                 }

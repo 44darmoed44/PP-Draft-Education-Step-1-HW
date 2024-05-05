@@ -3,7 +3,7 @@ using Scripts.UI.Widgets;
 using UnityEngine;
 
 
-namespace Scripts.UI.Settings
+namespace Scripts.UI.HUD.Windows.Settings
 {
     public class SettingsWindow : AnimatedWindow
     {
@@ -15,6 +15,13 @@ namespace Scripts.UI.Settings
 
             _music.SetModel(GameSettings.I.Music);
             _sfx.SetModel(GameSettings.I.Sfx);
+        }
+
+        public void OnShowLanguage()
+        {
+            var window = Resources.Load<GameObject>("UI/LanguageSettingMenu");
+            var canvas = FindObjectOfType<Canvas>();
+            Instantiate(window, canvas.transform);
         }
     }
 }

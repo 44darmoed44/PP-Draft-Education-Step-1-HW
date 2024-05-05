@@ -1,13 +1,10 @@
-﻿using JetBrains.Annotations;
-using Scripts.Components.ColliderBase;
+﻿using Scripts.Components.ColliderBase;
 using Scripts.Components.Health;
 using Scripts.Model.Definitions;
 using Scripts.Player;
-using Scripts.UI.MainMenu;
-using Unity.Mathematics;
+using Scripts.UI.HUD.Windows.MainMenu;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.TestTools;
 
 
 namespace Scripts

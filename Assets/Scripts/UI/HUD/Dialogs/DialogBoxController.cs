@@ -1,9 +1,8 @@
 
-using System;
 using System.Collections;
-using System.Net.NetworkInformation;
-using System.Runtime.InteropServices;
+using System.Linq;
 using Scripts.Model.Data;
+using Scripts.Model.Definitions.Localozation;
 using Scripts.Utils;
 using UnityEngine;
 using UnityEngine.UI;
@@ -107,12 +106,6 @@ namespace Scripts.UI.HUD.Dialog
         public void OnStartDialogAnimation()
         {
             _typingRoutin = StartCoroutine(TypeDialogText());
-        }
-
-
-        public void OnCloseAnimationComplete()
-        {
-
         }
     }  
 }
