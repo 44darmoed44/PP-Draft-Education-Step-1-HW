@@ -45,6 +45,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Clouds
+    uniqueID: 321539743
+    locked: 0
+  - name: Level
+    uniqueID: 4153617279
+    locked: 0
   - name: Player
     uniqueID: 3459284593
     locked: 0

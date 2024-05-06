@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Scripts
+namespace Scripts.Animation
 {
     [RequireComponent(typeof(SpriteRenderer))]
 

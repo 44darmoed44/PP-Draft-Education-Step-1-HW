@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5553702806861403480}
+  - component: {fileID: 3654075405061884926}
   m_Layer: 10
   m_Name: SeashellDeath
   m_TagString: Untagged
@@ -34,6 +35,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3654075405061884926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1894113857539408997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f79677d867605124bbdb94f336eae282, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objectToDestroy: {fileID: 1894113857539408997}
 --- !u!1 &2887444867288812991
 GameObject:
   m_ObjectHideFlags: 0
@@ -46,6 +60,7 @@ GameObject:
   - component: {fileID: 1768299223434186717}
   - component: {fileID: 4394086035871904848}
   - component: {fileID: 100217814577355791}
+  - component: {fileID: 3657377603887122789}
   m_Layer: 10
   m_Name: 2
   m_TagString: Untagged
@@ -104,7 +119,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -835682703
-  m_SortingLayer: 1
+  m_SortingLayer: 3
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: ab1eb3feb0f2dd048bfd38e8dd5f0a52, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -171,6 +186,34 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &3657377603887122789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2887444867288812991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 812e24ba1d3a8f349a2493febc4446b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fadeDelay: 0.1
+  _fadeSpeed: 0.1
+  _oAnimationFinish:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3654075405061884926}
+        m_MethodName: DestroyObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5175245316384447522
 GameObject:
   m_ObjectHideFlags: 0
@@ -183,6 +226,7 @@ GameObject:
   - component: {fileID: 5978498419295111827}
   - component: {fileID: 9169319099313079917}
   - component: {fileID: 6857501055070711446}
+  - component: {fileID: 2402716261701808044}
   m_Layer: 10
   m_Name: 5
   m_TagString: Untagged
@@ -241,7 +285,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -835682703
-  m_SortingLayer: 1
+  m_SortingLayer: 3
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 0b8522e59e0fb4047a27707885bbdf2a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -309,6 +353,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &2402716261701808044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5175245316384447522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 812e24ba1d3a8f349a2493febc4446b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fadeDelay: 0.1
+  _fadeSpeed: 0.1
+  _oAnimationFinish:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5521810379018515752
 GameObject:
   m_ObjectHideFlags: 0
@@ -321,6 +382,7 @@ GameObject:
   - component: {fileID: 5379126912434199780}
   - component: {fileID: 6979957853338654279}
   - component: {fileID: 5420180784751379878}
+  - component: {fileID: 4638823498957095801}
   m_Layer: 10
   m_Name: 3
   m_TagString: Untagged
@@ -379,7 +441,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -835682703
-  m_SortingLayer: 1
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4f812dc76ac7f7643b15ec153d30956c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -446,6 +508,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &4638823498957095801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5521810379018515752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 812e24ba1d3a8f349a2493febc4446b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fadeDelay: 0.1
+  _fadeSpeed: 0.1
+  _oAnimationFinish:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7098641904086471010
 GameObject:
   m_ObjectHideFlags: 0
@@ -458,6 +537,7 @@ GameObject:
   - component: {fileID: 36874118227856483}
   - component: {fileID: 4615200042309501721}
   - component: {fileID: 8401671949785672295}
+  - component: {fileID: 3531203517642465223}
   m_Layer: 10
   m_Name: 4
   m_TagString: Untagged
@@ -516,7 +596,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -835682703
-  m_SortingLayer: 1
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 87bbb0c726d42d1409b9d3c830292931, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -586,3 +666,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &3531203517642465223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7098641904086471010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 812e24ba1d3a8f349a2493febc4446b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fadeDelay: 0.1
+  _fadeSpeed: 0.1
+  _oAnimationFinish:
+    m_PersistentCalls:
+      m_Calls: []

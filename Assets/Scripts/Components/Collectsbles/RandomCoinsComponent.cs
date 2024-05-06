@@ -40,9 +40,6 @@ namespace Scripts.Components.Collectables
         public void SpawnCoins()
         {
             var coinsList = RandomizeCoins();
-
-            Debug.Log(coinsList);
-
             if (coinsList.Length > 0)
             {
                 foreach (var coin in coinsList)

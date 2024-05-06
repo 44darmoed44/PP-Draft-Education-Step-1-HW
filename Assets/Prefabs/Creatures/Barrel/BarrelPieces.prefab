@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5834409935858966745}
   - component: {fileID: 7669087371808969251}
   - component: {fileID: 1488743499222609383}
+  - component: {fileID: 5713740175886571408}
   m_Layer: 10
   m_Name: 5
   m_TagString: Untagged
@@ -69,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -141350017
+  m_SortingLayer: 2
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 7b55cf2a93d28844db0a8465e0196b5b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -137,6 +138,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5713740175886571408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2053238663865255692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 812e24ba1d3a8f349a2493febc4446b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fadeDelay: 0.1
+  _fadeSpeed: 0.1
+  _oAnimationFinish:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &4560466870634572616
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,6 +167,7 @@ GameObject:
   - component: {fileID: 4186128063805220715}
   - component: {fileID: 8395429934498041644}
   - component: {fileID: 1454569685655249249}
+  - component: {fileID: 1504668380259834861}
   m_Layer: 10
   m_Name: 4
   m_TagString: Untagged
@@ -206,8 +225,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -141350017
+  m_SortingLayer: 2
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 6cb4c290fcf7456429695deba6b35dd6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -274,6 +293,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1504668380259834861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4560466870634572616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 812e24ba1d3a8f349a2493febc4446b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fadeDelay: 0.1
+  _fadeSpeed: 0.1
+  _oAnimationFinish:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &4840990708140561225
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,6 +322,7 @@ GameObject:
   - component: {fileID: 2041809289527810915}
   - component: {fileID: 6659166784897871421}
   - component: {fileID: 3297736644313512714}
+  - component: {fileID: 6457063500128223435}
   m_Layer: 10
   m_Name: 3
   m_TagString: Untagged
@@ -343,8 +380,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -141350017
+  m_SortingLayer: 2
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 31044475d508db541a5959e855a7ced9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -409,6 +446,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &6457063500128223435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4840990708140561225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 812e24ba1d3a8f349a2493febc4446b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fadeDelay: 0.1
+  _fadeSpeed: 0.1
+  _oAnimationFinish:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &4848391457798980787
 GameObject:
   m_ObjectHideFlags: 0
@@ -421,6 +475,7 @@ GameObject:
   - component: {fileID: 3884769651217625976}
   - component: {fileID: 1529838319791735046}
   - component: {fileID: 7656176018444510533}
+  - component: {fileID: 6873144840305984337}
   m_Layer: 10
   m_Name: 2
   m_TagString: Untagged
@@ -478,8 +533,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -141350017
+  m_SortingLayer: 2
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 9068ff1ea725c3a49ac2b565648104b0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -545,6 +600,34 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &6873144840305984337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4848391457798980787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 812e24ba1d3a8f349a2493febc4446b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fadeDelay: 0.1
+  _fadeSpeed: 0.1
+  _oAnimationFinish:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5952592182519543113}
+        m_MethodName: DestroyObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6102941447742866700
 GameObject:
   m_ObjectHideFlags: 0
@@ -554,6 +637,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6102941447742866690}
+  - component: {fileID: 5952592182519543113}
   m_Layer: 10
   m_Name: BarrelPieces
   m_TagString: Untagged
@@ -579,3 +663,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5952592182519543113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6102941447742866700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f79677d867605124bbdb94f336eae282, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objectToDestroy: {fileID: 6102941447742866700}
