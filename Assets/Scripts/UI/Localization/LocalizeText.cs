@@ -1,4 +1,5 @@
 using System;
+using System.Xml.Schema;
 using Scripts.Model.Definitions.Localozation;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,6 +10,16 @@ namespace Assets.Scripts.UI.Localization
     public class LocalizeText : MonoBehaviour
     {
         [SerializeField] private string _key;
+
+        public string Key 
+        { 
+            get => _key; 
+            set
+            {
+                _key = value;
+                Localize();
+            }  
+        }
 
         private Text _text;
         

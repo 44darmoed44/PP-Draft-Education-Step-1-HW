@@ -40,9 +40,32 @@ MonoBehaviour:
     Value: "EXIT\r"
   - Key: dialog_continue_button
     Value: "Continue...\r"
+  - Key: unlock_button
+    Value: "UNLOCK\r"
+  - Key: movement_section
+    Value: "MOVEMENT\r"
+  - Key: combat_section
+    Value: "COMBAT\r"
+  - Key: stats_section
+    Value: "STATS\r"
+  - Key: perk_price
+    Value: "Price:\r"
+  - Key: perk_total
+    Value: "Total:\r"
   - Key: wooden_door_dialog
     Value: "To open me you need a key&Try to find it!\r"
   - Key: crabNPC_dialog_fail
     Value: "Get me 20 coins....&And I'll show you The Miracle\r"
   - Key: crabNPC_dialog_success
-    Value: And now The Miracle&I have coins...&And you are not!!!!!&AHAHAHAHAHAHAHAHA
+    Value: "And now The Miracle&I have coins...&And you are not!!!!!&AHAHAHAHAHAHAHAHA\r"
+  - Key: default_perk_info
+    Value: "Here you can acquire new perks! If you have diamonds to pay, of course.\r"
+  - Key: perk_double_jump_info
+    Value: "Discover new powers in yourself and challenge gravity! This perk allows
+      you to double jump.\r"
+  - Key: perk_strong_throw_info
+    Value: "INDEV\r"
+  - Key: perk_summon_info
+    Value: "INDEV\r"
+  - Key: perk_increase_hp_info
+    Value: INDEV

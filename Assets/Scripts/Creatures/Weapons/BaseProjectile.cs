@@ -21,5 +21,10 @@ namespace Scripts.Creatures.Weapons
             _position = _rb.position;
             _position.x += _direction * _speed;
         }
+
+        public void SetSpeed(float value)
+        {
+            _speed = value;
+        }
     }
 }

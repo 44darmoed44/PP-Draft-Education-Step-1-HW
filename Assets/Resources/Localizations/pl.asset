@@ -40,10 +40,34 @@ MonoBehaviour:
     Value: "WYJ\u015ACIE\r"
   - Key: dialog_continue_button
     Value: "Kontynuowa\u0107...\r"
+  - Key: unlock_button
+    Value: "BADA\u0106\r"
+  - Key: movement_section
+    Value: "RUCH\r"
+  - Key: combat_section
+    Value: "WALKA\r"
+  - Key: stats_section
+    Value: "STATYSTYKI\r"
+  - Key: perk_price
+    Value: "Cena:\r"
+  - Key: perk_total
+    Value: "Ca\u0142kowity:\r"
   - Key: wooden_door_dialog
     Value: "B\u0119dziesz potrzebowa\u0142 klucza, \u017Ceby mnie otworzy\u0107!&Spr\xF3buj
       go znale\u017A\u0107!\r"
   - Key: crabNPC_dialog_fail
     Value: "Daj mi 20 monet....&a poka\u017C\u0119 ci sztuczk\u0119!\r"
   - Key: crabNPC_dialog_success
-    Value: A teraz sztuczka!&Ja mam monety...&a ty nie!!!&AHAHAHAHAHAHAHA
+    Value: "A teraz sztuczka!&Ja mam monety...&a ty nie!!!&AHAHAHAHAHAHAHA\r"
+  - Key: default_perk_info
+    Value: "Tutaj mo\u017Cesz kupi\u0107 nowe bonusy! Je\u015Bli oczywi\u015Bcie
+      masz diamenty do zap\u0142aty.\r"
+  - Key: perk_double_jump_info
+    Value: "Odkryj w sobie nowe moce i rzu\u0107 wyzwanie grawitacji! Ten atut pozwala
+      na podw\xF3jny skok\r"
+  - Key: perk_strong_throw_info
+    Value: "W ROZWOJU\r"
+  - Key: perk_summon_info
+    Value: "W ROZWOJU\r"
+  - Key: perk_increase_hp_info
+    Value: W ROZWOJU

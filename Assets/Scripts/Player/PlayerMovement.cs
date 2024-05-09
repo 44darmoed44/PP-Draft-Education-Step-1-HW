@@ -111,7 +111,7 @@ namespace Scripts.Player
             {
                 yVeocity += _jumpScale;
             }
-            else if (_allowDoubleJump)
+            else if (_allowDoubleJump && _session.Data.Perks.Contains("double-jump"))
             {
                 yVeocity = _jumpScale;
                 _animator.SetTrigger(allowDoubleJumpKey);
